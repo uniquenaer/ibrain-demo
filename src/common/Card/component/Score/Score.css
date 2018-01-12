@@ -1,0 +1,37 @@
+.card-score-container{
+    border-top:1px solid #efefef;
+    width:100%;
+    min-height: 42%;
+    margin-top: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.card-score-icons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 17px;
+}
+.card-score-icon{
+    /*margin-left: 11px;*/
+    /*margin-right: 11px;*/
+}
+.card-score-icon img{
+    width: 50%;
+    height: 50%;
+}
+.card-score-container p{
+    font-size: 15px;
+    color: #7a7a7a;
+}
+.card-score-icon p{
+    font-size: 12px;
+    margin-top: 7px;
+}
+.card-score-icon.active p{
+    color: #f39090;
+}
+.card-score-icon.active button{
+    pointer-events: none;
+}

@@ -1,0 +1,69 @@
+.pack.container{
+    width: 210px;
+    height: 153px;
+    background: url("http://webstatic.openmindclub.com/static/media/pack_finished_bg.png") no-repeat top left;
+    background-size: contain;
+    position: relative;
+    /*box-shadow: 0 2px 4px 0 #aaaaaa;*/
+    border-radius: 20px 20px 10px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+/*.locked{*/
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+/*}*/
+.pack-title{
+    position: absolute;
+    top: 5px;
+    bottom: 0px;
+    left: 20px;
+    right: 20px;
+    white-space: normal; /* to wrap text */
+    font-size: 18px;
+    color:#35658f;
+    line-height: 24px;
+    height: 48px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: auto;
+}
+.pack.locked .pack-title{
+    top: 40px;
+    bottom: 0px;
+    color: #a2a2a2;
+    font-size: 14px;
+}
+
+.pack .pack-status{
+    position: absolute;
+    bottom: 0;
+    text-align: right;
+    width:100%;
+    font-size: 12px;
+    padding-right: 30px;
+    color: #fff;
+    line-height: 26px;
+    /*margin-bottom: 5px;*/
+}
+.pack.locked .pack-status {
+   margin-bottom: 0;
+    color: #63676c;
+}
+/*div[data-tag="部落"] .pack{*/
+    /*background: url("./images/group_bg.png") no-repeat top center;*/
+    /*background-size: contain;*/
+/*}*/
+
+div .pack.locked {
+    background: url("./images/pack_locked_bg.png") no-repeat top center;
+    background-size: contain;
+}
+div .pack.progressing {
+    background: url("./images/pack_progressing_bg.png") no-repeat top center;
+    background-size: contain;
+}

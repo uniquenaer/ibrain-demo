@@ -1,0 +1,178 @@
+.who_viewd {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 27px 0 41px;
+    background-image:linear-gradient(-115deg, #fd7997 0%, #f05373 97%);
+    border-bottom-right-radius:8px;
+    border-bottom-left-radius: 8px;
+    z-index: 9;
+}
+.viewed .view_header {
+    width:28px;
+    height:28px;
+    border-radius:100%;
+    margin-right: 10px;
+}
+.isvideo .viewed i{
+    background: #CCF1F7;
+    border: 1px solid #60bdb9;
+}
+.isgroup .viewed i {
+    background: #F5F8FD;
+    border: 1px solid #DBE1E4;
+}
+.viewed i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #F2CAD1;
+    border: 1px solid #F15774;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.who_viewd .viewed {
+    float: left;
+    position: absolute;
+    height: 28px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+}
+.viewd_count {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 13px;
+    margin-right: 35px;
+}
+
+.isgroup.who_viewd,.isvideo.who_viewd {
+    background: #fff;
+}
+.isgroup .who_viewd_img {
+    border-top: 1px solid #ccc;
+}
+.isgroup .viewd_count,.isvideo .viewd_count{
+    color: #604f4f;
+    opacity: .68;
+}
+
+/*student_view 谁看过我列表*/
+.stu_content {
+    width: 100%;
+    height: 75%;
+    overflow-x: visible;
+    overflow-y: auto;
+}
+.student_view {
+    /*width: 612px;*/
+    /*height: 417px;*/
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 8px;
+    /*margin: auto;*/
+}
+.student_view h3 {
+    background:#f9e0e5;
+    border-top-left-radius:8px;
+    border-top-right-radius: 8px;
+    width:100%;
+    height:58px;
+    font-size: 18px;
+    color: #e83f5e;
+    line-height: 58px;
+    padding-left: 58px ;
+    position: relative;
+    cursor: pointer;
+}
+.student_view h3::before {
+    content: '';
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background: url("close.png") no-repeat center center;
+    background-size: 40%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 16px;
+
+}
+.student_view .stu_view_detail {
+    margin-left: 30px;
+    margin-top: 15px;
+    border-left: 2px solid #e83f5e;
+    /*padding: 0 44px;*/
+}
+.student_view .view_date {
+    margin-top: 15px;
+    font-size:14px;
+    color:#545353;
+    margin-bottom:7px;
+    position: relative;
+    top: -3px;
+    left: -15px;
+}
+.student_view .view_date::before {
+    content: '';
+    display: inline-block;
+    background:#ffeff2;
+    border:1px solid #e83f5e;
+    width:12px;
+    height:12px;
+    border-radius:100%;
+    position: relative;
+    right: 26px;
+
+}
+.student_view .viewed {
+    padding-left: 34px;
+}
+.student_view .view_header {
+    margin-bottom: 10px;
+}
+.student_view .view-people {
+    width: 90%;
+
+}
+.stu_view_detail {
+
+}
+.stu_view_box {
+    z-index: 99999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background:transparent;
+    display: block;
+}
+
+.dotting {
+    display: inline-block;
+    min-width: 2px;
+    min-height: 2px;
+    box-shadow: 2px 0 currentColor, 6px 0 currentColor, 10px 0 currentColor; /* for IE9+, ..., 3个点 */
+    animation: dot .6s infinite step-start both; /* for IE10+, ... */
+    *zoom: expression(this.innerHTML = '...'); /*  for IE7. 若无需兼容IE7, 此行删除 */
+}
+.dotting:before { content: '...'; } /* for IE8. 若无需兼容IE8, 此行以及下一行删除*/
+.dotting::before { content: ''; } /* for IE9+ 覆盖 IE8 */
+:root .dotting { margin-right: 14px; } /* for IE9+,FF,CH,OP,SF 占据空间*/
+
+@keyframes dot {
+    25% { box-shadow: none; }                                  /* 0个点 */
+    50% { box-shadow: 2px 0 currentColor; }                    /* 1个点 */
+    75% { box-shadow: 2px 0 currentColor, 6px 0 currentColor;  /* 2个点 */ }
+}

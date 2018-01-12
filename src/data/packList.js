@@ -1,0 +1,1 @@
+const packList = [{"id":"73a6c4adb4e7b223a340c4137f775590","packName":"国王的盛宴","open_read":"2018-01-12","locked":false}]; export default packList

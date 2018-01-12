@@ -1,0 +1,107 @@
+.markdown img {
+    max-width: 100%;
+}
+.markdown .md-img-wrap {
+    margin: 15px 0;
+    text-align: center;
+}
+.asgn-main-content .markdown h1,.asgn-main-content .markdown h2,
+.asgn-main-content .markdown h3,.asgn-main-content .markdown h4,
+.asgn-main-content .markdown h5,.asgn-main-content .markdown h6 {
+    text-align: center;
+}
+.markdown h1 {
+    font-size:2em;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+.markdown h2 {
+    font-size:1.75em;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: justify;
+}
+.markdown h3 {
+    font-size:1.38em;
+    margin-bottom: 38px;
+    text-align: justify;
+}
+.markdown h4 {
+    font-size:1.25em;
+    margin-bottom: 38px;
+    text-align: justify;
+}
+.markdown h5 {
+    font-size:1.125em;
+    margin-bottom: 38px;
+    text-align: justify;
+}
+.markdown h6 {
+    font-size:1em;
+    margin-bottom: 38px;
+    text-align: justify;
+}
+.markdown blockquote {
+    border-left: 3px solid #B4A4A4;
+    font-size:16px;
+    line-height: 66px;
+    text-align:left;
+    padding: 0 0 0 15px;
+}
+.markdown blockquote p{
+    color:#7F6767;
+}
+
+.markdown li {
+    color: #525050;
+    margin-bottom: 5px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+.markdown li p{
+    display: inline;
+}
+.markdown p {
+    color:#4a4a4a;
+    line-height:30px;
+    text-align:left;
+    font-weight: 400;
+    font-size: 17px;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+}
+.markdown strong {
+    font-size:1em;
+    /*color:#5d5b5b;*/
+    letter-spacing:0px;
+    line-height:28px;
+    text-align:left;
+    font-weight: bolder;
+    color: #000;
+}
+.markdown a {
+    font-size:1em;
+    color:#12C8AE;
+    line-height:28px;
+    text-align:left;
+    word-wrap:break-word;
+    word-break:normal;
+}
+.markdown code {
+    font-size:1em;
+    color: #B86464;
+    line-height:28px;
+    text-align:left;
+}
+
+.markdown ul, .markdown ol {
+    list-style-position: inside;
+    margin: 10px 0 10px 20px;
+    /*list-style: ;*/
+}
+
+.markdown blockquote li {
+    line-height: 30px;
+}
+

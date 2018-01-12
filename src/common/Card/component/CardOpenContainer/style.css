@@ -1,0 +1,95 @@
+.card-open-container-mask {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #c9c9cb;
+    overflow: auto;
+    z-index: 99;
+    /*min-width: 760px;*/
+}
+
+.card-open-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    width: 914px;
+    height: 643px;
+    margin: auto;
+}
+
+@media (max-width: 1260px), (max-height: 900px) {
+    .card-open-container {
+        width: 790px;
+        height: 520px;
+    }
+}
+
+@media (max-width: 1000px), (max-height: 700px) {
+    .card-open-container {
+        width: 368px;
+        height: 529px;
+    }
+}
+
+.card-open-container-btn {
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: 0;
+    bottom: 0;
+    margin: 250px -30px 250px -30px;
+}
+
+.next-card {
+    right: -70px;
+}
+
+.prev-card {
+    left: -70px;
+}
+
+.card-open-container img {
+    margin: auto;
+}
+
+.card-open {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.card-open-container-close {
+    position: absolute;
+    top: -30px;
+    right: -10px;
+}
+
+.card-open-container-close img {
+    width: 21px;
+    height: 21px;
+}
+
+.prev-card img, .next-card img {
+    width: 20px;
+    height: 35px;
+}
+
+.card-open-container-footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100px;
+    height: 20px;
+    bottom: 4%;
+    margin: auto;
+    font-size: 14px;
+    color: #494b59;
+    text-align: center;
+}

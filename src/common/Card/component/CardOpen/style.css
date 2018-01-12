@@ -1,0 +1,119 @@
+.card-open-wrap{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    height: 100%;
+    /*border: 1px solid #cacaca;*/
+}
+
+
+.card-open-main {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255,255,1);
+    border-radius:10px;
+    overflow: hidden;
+}
+
+.card-open-main .card-main-content {
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    padding: 50px 65px 41px 65px;
+}
+
+.back .card-open-main .card-main-content {
+    bottom: 0;
+    padding-bottom: 50px;
+}
+
+.card-open-main-video {
+    padding: 0 0 40px 0;
+}
+
+.card-open-main .card-title{
+    font-size:30px;
+    color:#404040;
+    text-align:center;
+    margin-bottom: 45px;
+}
+.card-open-main .markdown{
+    margin-bottom: 40px;
+}
+div .card-open-main.action {
+    background: url("http://webstatic.openmindclub.com/static/media/action.png") no-repeat top center;
+    background-size: cover;
+}
+
+div .card-open-main.evaluate {
+    background: url("http://webstatic.openmindclub.com/static/media/evaluate.png") no-repeat top center;
+    background-size: cover;
+}
+
+div .card-open-main.exam {
+    background: url("http://webstatic.openmindclub.com/static/media/exam.png") no-repeat top center;
+    background-size: cover;
+}
+
+div .card-open-main.power {
+    background: url("http://webstatic.openmindclub.com/static/media/power.png") no-repeat top center;
+    background-size: cover;
+}
+
+div .card-open-main.remember {
+    background: url("http://webstatic.openmindclub.com/static/media/remember.png") no-repeat top center;
+    background-size: cover;
+}
+div .card-open-main.asgn {
+    background: url("http://webstatic.openmindclub.com/static/media/asgn.png") no-repeat top center;
+    background-size: cover;
+}
+
+.flip-btn {
+    border-radius:100%;
+    position: absolute;
+    top: 7px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    z-index: 500;
+}
+
+.flip-btn img {
+    width: 100%;
+    height: 100%;
+}
+.white-gradient-container{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.white-gradient-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.back .white-gradient-container {
+    bottom: 0;
+}
+.less-content{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.less-content .markdown {
+    /*width: 400px;*/
+    margin: 0 auto;
+}

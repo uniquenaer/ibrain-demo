@@ -1,0 +1,37 @@
+
+.markdown input[type=checkbox] {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    line-height:21px;
+}
+
+.markdown input[type=checkbox] + label {
+    display: inline-block;
+    margin-left: -2em;
+    font-size:13px;
+    color:#747474;
+    line-height:21px;
+    text-align:left;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.markdown input[type=checkbox] + label > span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    line-height:21px;
+    vertical-align: text-top;
+    background: url("../img/checkbox@2x.png") no-repeat center center;
+    background-size: 14px 14px;
+}
+
+.markdown input[type=checkbox]:checked + label > span {
+    border: none;
+    background: url("../img/checkbox-check@2x.png") no-repeat center center;
+    background-size: 14px 14px;
+}
+

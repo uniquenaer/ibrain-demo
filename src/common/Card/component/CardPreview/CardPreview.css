@@ -1,0 +1,86 @@
+.card-preview {
+    width: 8vw;
+    height: 10vw;
+    max-width: 120px;
+    max-height: 150px;
+    min-height: 130px;
+    min-width: 100px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 #aaaaaa;
+    margin: 3%;
+}
+
+.card-preview-bottom {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    height: 8%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.finish .card-preview-bottom {
+    background-image: linear-gradient(-54deg, #fe7593 0%, #ec4868 100%);
+}
+
+.ongoing .card-preview-bottom {
+    background: #2eb8c3;
+}
+
+/*.card-preview.finish{*/
+/*background: white;*/
+/*border-radius: 6px;*/
+/*!*background: url('./CardPreview/image/card_finished_bg.png') no-repeat center;*!*/
+/*!*background-size: contain;*!*/
+/*}*/
+/*.card-preview.ongoing{*/
+/*background: url('./CardPreview/image/card_ongoing_bg.png') no-repeat center;*/
+/*background-size: contain;*/
+/*}*/
+.card-preview.lock {
+    /*background: url('./CardPreview/image/card_lock_bg.png') no-repeat center;*/
+    /*background-size: contain;*/
+    /*background: #c1c8d2;*/
+    pointer-events: none;
+}
+
+.lock .card-preview-bottom {
+    background: #a2a2a2;
+}
+
+.card-preview img {
+    display: block;
+    max-height: 25px;
+    /*max-width: 25px;*/
+}
+
+.card-preview .card-title {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+    font-size: 13px;
+    color: #343333;
+    line-height: 20px;
+}
+
+.card-preview .card-type {
+    /*margin-top: 13%;*/
+    padding-top: 20%;
+}
+
+.finish .card-title {
+    color: #747474;
+}
+
+.ongoing .card-title {
+    color: #388eaf;
+}
+
+.lock .card-title {
+    color: #a2a2a2;
+}
