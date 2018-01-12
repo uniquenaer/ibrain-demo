@@ -12,7 +12,7 @@ const fs = require('fs');
 const path = require('path');
 const md5 = require('md5');
 
-const rawCsv = fs.readFileSync(path.join(__dirname, '1-1.5specialTopic.csv'));
+const rawCsv = fs.readFileSync(path.join(__dirname, '3specialTopic.csv'));
 
 const packIds = [], packMap = {}, packArr = [], cardIds = [], cardMap = [], cardArr = [];
 parse(rawCsv, { header: true, skip_empty_lines: true }, function (err, output) {
@@ -44,8 +44,8 @@ parse(rawCsv, { header: true, skip_empty_lines: true }, function (err, output) {
             cardArr.push(card)
         }
     });
-    fs.writeFile(path.join(__dirname, '../src/data/packList_one.js'), `const packList_one = ${JSON.stringify(packArr)}; export default packList_one`, 'utf8');
-    fs.writeFile(path.join(__dirname, '../src/data/cardList_one.js'), `const cardList_one = ${JSON.stringify(cardArr)}; export default cardList_one`, 'utf8');
+    fs.writeFile(path.join(__dirname, '../src/data/packList_two.js'), `const packList_two = ${JSON.stringify(packArr)}; export default packList_two`, 'utf8');
+    fs.writeFile(path.join(__dirname, '../src/data/cardList_two.js'), `const cardList_two = ${JSON.stringify(cardArr)}; export default cardList_two`, 'utf8');
 });
 
 

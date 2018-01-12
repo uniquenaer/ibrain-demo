@@ -14,11 +14,11 @@ class PackPage extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            activeTime: moment().add(3, 'days').format("MM-DD-YYYY"),
+            activeTime: moment().add(3, 'days').format("MM/DD/YYYY"),
             // activeTime: moment().format("MM-DD-YYYY"),
         };
-        this.MaxTime = moment().add(5, 'days').format("MM-DD-YYYY");
-        this.minTime = moment('2018-01-13').format("MM-DD-YYYY");
+        this.MaxTime = moment().add(5, 'days').format("MM/DD/YYYY");
+        this.minTime = moment('2018-01-13').format("MM/DD/YYYY");
         const { data_source } = props.params;
         this.packList = dataUtils[data_source].packList;
     }
@@ -46,8 +46,8 @@ class PackPage extends PureComponent {
         this.setState((prevState, prevProps) => {
             const { activeTime } = prevState;
             const nextActiveTime = direct === 'next'
-                ? moment(activeTime).add(1, 'day').format("YYYY-MM-DD")
-                : moment(activeTime).subtract(1, 'day').format("YYYY-MM-DD");
+                ? moment(activeTime).add(1, 'day').format("MM/DD/YYYY")
+                : moment(activeTime).subtract(1, 'day').format("MM/DD/YYYY");
             return { activeTime: nextActiveTime }
         }, () => {
             console.log(this.state.activeTime);
@@ -71,15 +71,9 @@ class PackPage extends PureComponent {
 
     render() {
         const { activeTime } = this.state;
-        const packArr = this.packList.filter((pack) => {
-            const open_read = new Date(pack.open_read);
-            const Time = new Date(activeTime);
-            // alert(`${Time}${Time.getTime()}`);
-            // alert(`${open_read.getTime()},${Time.getTime()}`);
-            return open_read.getTime() === Time.getTime()
-        });
-        const IsNext = moment(activeTime).isBefore(this.MaxTime, 'days');
-        const IsPrev = moment(activeTime).isAfter(this.minTime, 'days');
+        const packArr = this.packList.filter((pack) => (moment(pack.open_read).isSame(activeTime)));
+        const IsNext = moment(activeTime).isBefore(moment(this.MaxTime));
+        const IsPrev = moment(activeTime).isAfter(moment(this.minTime));
         return (
             <TopNav
                 router={this.props.router}
