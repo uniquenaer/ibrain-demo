@@ -14,13 +14,13 @@ class PackPage extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            activeTime: moment().add(3, 'days').format("MM/DD/YYYY"),
-            // activeTime: moment().format("MM-DD-YYYY"),
+            // activeTime: moment().add(3, 'days').format("MM/DD/YYYY"),
+            activeTime: moment().format("MM-DD-YYYY"),
         };
-        this.MaxTime = moment().add(5, 'days').format("MM/DD/YYYY");
+        this.MaxTime = moment().format("MM/DD/YYYY");
         this.minTime = moment('2018-01-13').format("MM/DD/YYYY");
         const { data_source } = props.params;
-        this.packList = dataUtils[data_source].packList;
+        this.packList = dataUtils[data_source] && dataUtils[data_source].packList;
     }
 
     renderPack(pack) {
@@ -71,22 +71,21 @@ class PackPage extends PureComponent {
 
     render() {
         const { activeTime } = this.state;
-        const packArr = this.packList.filter((pack) => (moment(pack.open_read).isSame(activeTime)));
+        const packArr = this.packList && this.packList.filter((pack) => (moment(pack.open_read).isSame(activeTime)));
         const IsNext = moment(activeTime).isBefore(moment(this.MaxTime));
         const IsPrev = moment(activeTime).isAfter(moment(this.minTime));
-        console.log('min', this.minTime, 'active', activeTime, 'max:', this.MaxTime);
         return (
             <TopNav
                 router={this.props.router}
                 centerComponent={this.renderCenter}
                 leftComponent={this.renderPrevTime.bind(this, IsPrev)}
                 rightComponent={this.renderNextTime.bind(this, IsNext)}>
-                <Carousel
+                {packArr && packArr.length > 0 ? <Carousel
                     dataSource={packArr}
                     renderCell={this.renderPack.bind(this)}
                     maxRows={rows}
                     maxCols={cols}
-                    shortcut />
+                    shortcut /> : <p style={{ textAlign: 'center', marginTop: '20px', color: '#383838' }}>暂无可看内容</p>}
             </TopNav>
         );
     }

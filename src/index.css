@@ -3,6 +3,7 @@ html, body {
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     font-family: "PingFangSC-Regular", "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft YaHei", "微软雅黑", sans-serif;
 }
 

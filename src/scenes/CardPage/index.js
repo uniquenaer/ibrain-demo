@@ -21,8 +21,8 @@ class CardPage extends PureComponent {
             OpenCard: false,
             initialOpenCardIndex: null,
         };
-        this.packList = dataUtils[data_source].packList;
-        this.cardList = dataUtils[data_source].cardList;
+        this.packList = dataUtils[data_source] && dataUtils[data_source].packList;
+        this.cardList = dataUtils[data_source] && dataUtils[data_source].cardList;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -65,7 +65,14 @@ class CardPage extends PureComponent {
 
     render() {
         const { OpenCard, initialOpenCardIndex } = this.state;
-        const index = this.packList.findIndex(pack => pack.id === this.packId);
+        const index = this.packList && this.packList.findIndex(pack => pack.id === this.packId);
+        if (index == null || index === -1) return (
+            <TopNav
+                title={pack && pack.packName}
+                router={this.props.router}>
+                <p style={{ textAlign: 'center', marginTop: '20px', color: '#383838' }}>暂无可看内容</p>
+            </TopNav>
+        );
         const pack = this.packList[index];
         this.cardArr = this.cardList.filter(card => card.pack_id === this.packId);
         const cardCount = this.cardArr.length;
@@ -81,7 +88,7 @@ class CardPage extends PureComponent {
             : null;
         return (
             <TopNav
-                title={pack.packName}
+                title={pack && pack.packName}
                 router={this.props.router}>
                 <div style={{ height: '100%', width: '100%' }}>
                     {cardOpen}
