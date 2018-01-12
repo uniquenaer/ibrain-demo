@@ -3,11 +3,9 @@
  */
 import React, { PureComponent } from 'react';
 import moment from 'moment';
-import Papa from 'papaparse';
 import Carousel from '../../common/Carousel';
 import TopNav from '../../common/TopNav';
 import Pack from './component/Pack';
-// import packList from './packList';
 import packList from '../../data/packList';
 const rows = 3;
 const cols = 4;
@@ -18,9 +16,7 @@ class PackPage extends PureComponent {
         this.state = {
             activeTime: moment().format("MM-DD-YYYY"),
         };
-
     }
-
 
     renderPack(pack) {
         return (

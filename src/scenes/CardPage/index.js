@@ -63,6 +63,7 @@ class CardPage extends PureComponent {
 
     render() {
         const { OpenCard, initialOpenCardIndex } = this.state;
+        console.log(this.packId);
         const packIds = packList.map(pack => pack.id);
         const cardCount = cardList.length;
         const isLastPack = packIds.indexOf(this.packId) === (packIds.length - 1);
@@ -103,4 +104,4 @@ class CardPage extends PureComponent {
 }
 
 
-export default CardPage
+export default CardPage;
