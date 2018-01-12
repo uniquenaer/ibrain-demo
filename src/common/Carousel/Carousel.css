@@ -56,10 +56,10 @@
     color: #494b59;
     font-size: 18px;
     position: absolute;
-    bottom: 4%;
+    bottom: 5px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    padding-right: 20px;
+    padding-right: 10px;
 }

@@ -1,4 +1,4 @@
-.card-open-wrap{
+.card-open-wrap {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -10,12 +10,11 @@
     /*border: 1px solid #cacaca;*/
 }
 
-
 .card-open-main {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255,255,1);
-    border-radius:10px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -26,7 +25,7 @@
     left: 0;
     right: 0;
     overflow-y: auto;
-    padding: 50px 65px 41px 65px;
+    padding: 20px 30px;
 }
 
 .back .card-open-main .card-main-content {
@@ -38,15 +37,17 @@
     padding: 0 0 40px 0;
 }
 
-.card-open-main .card-title{
-    font-size:30px;
-    color:#404040;
-    text-align:center;
+.card-open-main .card-title {
+    font-size: 24px;
+    color: #404040;
+    text-align: center;
     margin-bottom: 45px;
 }
-.card-open-main .markdown{
+
+.card-open-main .markdown {
     margin-bottom: 40px;
 }
+
 div .card-open-main.action {
     background: url("http://webstatic.openmindclub.com/static/media/action.png") no-repeat top center;
     background-size: cover;
@@ -71,13 +72,14 @@ div .card-open-main.remember {
     background: url("http://webstatic.openmindclub.com/static/media/remember.png") no-repeat top center;
     background-size: cover;
 }
+
 div .card-open-main.asgn {
     background: url("http://webstatic.openmindclub.com/static/media/asgn.png") no-repeat top center;
     background-size: cover;
 }
 
 .flip-btn {
-    border-radius:100%;
+    border-radius: 100%;
     position: absolute;
     top: 7px;
     right: 30px;
@@ -90,7 +92,8 @@ div .card-open-main.asgn {
     width: 100%;
     height: 100%;
 }
-.white-gradient-container{
+
+.white-gradient-container {
     position: absolute;
     bottom: 40px;
     left: 0;
@@ -98,7 +101,7 @@ div .card-open-main.asgn {
     height: 60px;
 }
 
-.white-gradient-container img{
+.white-gradient-container img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -107,7 +110,8 @@ div .card-open-main.asgn {
 .back .white-gradient-container {
     bottom: 0;
 }
-.less-content{
+
+.less-content {
     justify-content: center;
     display: flex;
     flex-direction: column;

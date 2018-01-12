@@ -50,6 +50,7 @@ class Carousel extends PureComponent {
         window.addEventListener('keydown', this._onKeyPress);
         window.addEventListener('resize', this._onResize);
     }
+
     componentWillUnmount() {
         window.removeEventListener('keydown', this._onKeyPress);
         window.removeEventListener('resize', this._onResize);
@@ -137,7 +138,7 @@ class Carousel extends PureComponent {
                 rows: maxRows,
                 cols: maxCols,
                 minCellWidth: containerWidth * 0.9 / maxCols,
-                minCellHeight: containerHeight * 0.8 / maxRows,
+                minCellHeight: containerHeight * 0.9 / maxRows,
             }, () => {
                 this._updateGrid();
             });
@@ -147,6 +148,7 @@ class Carousel extends PureComponent {
     _getElemWidth(element) {
         return element && element.getBoundingClientRect().width;
     }
+
     _getElemHeight(element) {
         return element && element.getBoundingClientRect().height;
     }
@@ -237,7 +239,7 @@ class Carousel extends PureComponent {
                             }}>
                             {renderCell(cell)}
                         </div>
-                        ))}
+                    ))}
                 </div>
             );
             slides.push(slide);
@@ -248,7 +250,11 @@ class Carousel extends PureComponent {
             // transitionDuration: '0.8s',
         };
         // when resizing event fires, cancel transitionDuration to an invisible speed
-        if (resizing) { trackStyle.transitionDuration = 'initial'; } else { trackStyle.transitionDuration = '0.8s'; }
+        if (resizing) {
+            trackStyle.transitionDuration = 'initial';
+        } else {
+            trackStyle.transitionDuration = '0.8s';
+        }
         return (
             <div className="page-list" style={{ maxHeight: pageSlideHeight }}>
                 <div className="page-track" style={trackStyle}>
@@ -263,7 +269,9 @@ class Carousel extends PureComponent {
             return null;
         }
         return (
-            <div className="carousel-container" ref={(ref) => { this.container = ref; }}>
+            <div className="carousel-container" ref={(ref) => {
+                this.container = ref;
+            }}>
                 <div
                     className="carousel"
                     style={{

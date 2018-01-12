@@ -9,7 +9,7 @@ import TopNav from '../../common/TopNav';
 import Card from '../../common/Card';
 import dataUtils from '../../data/dataUtils';
 import './container.css';
-const rows = 4;
+const rows = 3;
 const cols = 5;
 
 class CardPage extends PureComponent {

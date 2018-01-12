@@ -56,7 +56,7 @@
 .markdown li {
     color: #525050;
     margin-bottom: 5px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.6;
 }
 .markdown li p{
@@ -67,7 +67,7 @@
     line-height:30px;
     text-align:left;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 16px;
     word-wrap: break-word;
     margin-bottom: 20px;
 }
