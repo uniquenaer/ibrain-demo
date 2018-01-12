@@ -23,6 +23,10 @@ export default class CardOpen extends PureComponent {
         this.renderFront = this.renderFront.bind(this);
     }
 
+    componentDidUpdate() {
+        document.querySelector('.card-main-content').scrollTo(0, 0)
+    };
+
     render() {
         const { card } = this.props;
         const { renderFront } = this;
