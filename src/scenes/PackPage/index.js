@@ -15,7 +15,7 @@ class PackPage extends PureComponent {
         super(props);
         this.state = {
             // activeTime: moment().add(3, 'days').format("MM/DD/YYYY"),
-            activeTime: moment().format("MM-DD-YYYY"),
+            activeTime: moment().format("MM/DD/YYYY"),
         };
         this.MaxTime = moment().format("MM/DD/YYYY");
         this.minTime = moment('2018-01-13').format("MM/DD/YYYY");
