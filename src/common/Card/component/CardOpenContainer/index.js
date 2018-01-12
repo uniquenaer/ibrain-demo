@@ -68,12 +68,12 @@ export default class CardOpenContainer extends PureComponent {
         const moveEndY = e.changedTouches[0].pageY;
         const X = moveEndX - this.startX;
         const Y = moveEndY - this.startY;
-        
-        if (Math.abs(X) > Math.abs(Y) && X > 70) {
+
+        if (Math.abs(X) > Math.abs(Y) && X > 40) {
             this.setState({ changeCardDirection: 'prev', moving: false }, () => {
                 prevCard && prevCard();
             });
-        } else if (Math.abs(X) > Math.abs(Y) && X < -70) {
+        } else if (Math.abs(X) > Math.abs(Y) && X < -40) {
             this.setState({ changeCardDirection: 'next', moving: false }, () => {
                 nextCard && nextCard();
             });

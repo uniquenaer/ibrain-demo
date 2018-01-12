@@ -74,6 +74,7 @@ class PackPage extends PureComponent {
         const packArr = this.packList.filter((pack) => (moment(pack.open_read).isSame(activeTime)));
         const IsNext = moment(activeTime).isBefore(moment(this.MaxTime));
         const IsPrev = moment(activeTime).isAfter(moment(this.minTime));
+        console.log('min', this.minTime, 'active', activeTime, 'max:', this.MaxTime);
         return (
             <TopNav
                 router={this.props.router}
