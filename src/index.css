@@ -94,7 +94,8 @@ table {
 
 input,
 textarea,
-select {
+select,
+button {
     outline: none;
     font-family: "PingFang SC", "Helvetica Neue", "Hiragino Sans GB", "Segoe UI", "Microsoft YaHei", "微软雅黑", sans-serif;
 }
@@ -113,6 +114,14 @@ img {
 input, select, button, img, a {
     /*-webkit-appearance:none;*/
     outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button[disabled] {
+    cursor: not-allowed;
 }
 
 #root {

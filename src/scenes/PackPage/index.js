@@ -6,7 +6,7 @@ import moment from 'moment';
 import Carousel from '../../common/Carousel';
 import TopNav from '../../common/TopNav';
 import Pack from './component/Pack';
-import packList from '../../data/packList';
+import dataUtils from '../../data/dataUtils';
 const rows = 3;
 const cols = 4;
 
@@ -14,8 +14,13 @@ class PackPage extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            activeTime: moment().format("MM-DD-YYYY"),
+            activeTime: moment().add(3, 'days').format("MM-DD-YYYY"),
+            // activeTime: moment().format("MM-DD-YYYY"),
         };
+        this.MaxTime = moment().add(5, 'days').format("MM-DD-YYYY");
+        this.minTime = moment('2018-01-13').format("MM-DD-YYYY");
+        const { data_source } = props.params;
+        this.packList = dataUtils[data_source].packList;
     }
 
     renderPack(pack) {
@@ -26,8 +31,7 @@ class PackPage extends PureComponent {
                 onClick={this.redirect.bind(this, pack.id)}>
                 <Pack
                     PackTitle={pack.packName}
-                    PackLocked={pack.locked}
-                    PackProgressing={pack.progressing} />
+                    PackLocked={pack.locked} />
             </a>
         );
     }
@@ -50,13 +54,15 @@ class PackPage extends PureComponent {
         });
     };
 
-    renderNextTime = () => (
-        <button style={{ lineHeight: '50px', fontSize: '14px' }} onClick={this.toggleActiveTime.bind(this, 'next')}>
+    renderNextTime = (IsNext) => (
+        <button style={{ lineHeight: '50px', fontSize: '14px' }} onClick={this.toggleActiveTime.bind(this, 'next')}
+                disabled={!IsNext}>
             后一天</button>
     );
 
-    renderPrevTime = () => (
+    renderPrevTime = (IsPrev) => (
         <button style={{ lineHeight: '50px', fontSize: '14px' }}
+                disabled={!IsPrev}
                 onClick={this.toggleActiveTime.bind(this, 'prev')}>前一天</button>
     );
 
@@ -64,14 +70,24 @@ class PackPage extends PureComponent {
         <span style={{ lineHeight: '50px', fontSize: '18px', display: 'inline-block', color: '#e75151' }}>脑计划</span>);
 
     render() {
+        const { activeTime } = this.state;
+        const packArr = this.packList.filter((pack) => {
+            const open_read = new Date(pack.open_read);
+            const Time = new Date(activeTime);
+            // alert(`${Time}${Time.getTime()}`);
+            // alert(`${open_read.getTime()},${Time.getTime()}`);
+            return open_read.getTime() === Time.getTime()
+        });
+        const IsNext = moment(activeTime).isBefore(this.MaxTime, 'days');
+        const IsPrev = moment(activeTime).isAfter(this.minTime, 'days');
         return (
             <TopNav
                 router={this.props.router}
                 centerComponent={this.renderCenter}
-                leftComponent={this.renderPrevTime}
-                rightComponent={this.renderNextTime}>
+                leftComponent={this.renderPrevTime.bind(this, IsPrev)}
+                rightComponent={this.renderNextTime.bind(this, IsNext)}>
                 <Carousel
-                    dataSource={packList}
+                    dataSource={packArr}
                     renderCell={this.renderPack.bind(this)}
                     maxRows={rows}
                     maxCols={cols}

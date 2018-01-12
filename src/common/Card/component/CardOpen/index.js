@@ -5,7 +5,7 @@
 import React, { PureComponent } from 'react';
 import Markdown from '../../../../common/markdown';
 import './style.css';
-import { CARD_STATUS, CARD_TYPE } from '../../constants';
+import { CARD_TYPE } from '../../constants';
 
 const CARD_TYPE_WITH_GRADIENT = ['action', 'power', 'remember'];
 const CARD_TYPE_WITH_ONLY_MARKDOWN = ['action', 'power', 'remember'];

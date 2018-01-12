@@ -7,9 +7,7 @@ import Carousel from '../../common/Carousel/index';
 import CardPreview from '../../common/Card/component/CardPreview';
 import TopNav from '../../common/TopNav';
 import Card from '../../common/Card';
-import cardList from '../../data/cardList';
-import packList from '../../data/packList';
-
+import dataUtils from '../../data/dataUtils';
 import './container.css';
 const rows = 4;
 const cols = 5;
@@ -17,10 +15,14 @@ const cols = 5;
 class CardPage extends PureComponent {
     constructor(props) {
         super(props);
+        const { data_source } = props.params;
+        this.packId = props.params.pack_id;
         this.state = {
             OpenCard: false,
             initialOpenCardIndex: null,
         };
+        this.packList = dataUtils[data_source].packList;
+        this.cardList = dataUtils[data_source].cardList;
     }
 
     componentWillReceiveProps(nextProps) {
@@ -46,7 +48,7 @@ class CardPage extends PureComponent {
     }
 
     onClickCard = (id) => {
-        const index = cardList.indexOf(id);
+        const index = this.cardArr.findIndex(card => card.id === id);
         this.setState({
             OpenCard: true,
             initialOpenCardIndex: index,
@@ -63,36 +65,28 @@ class CardPage extends PureComponent {
 
     render() {
         const { OpenCard, initialOpenCardIndex } = this.state;
-        console.log(this.packId);
-        const packIds = packList.map(pack => pack.id);
-        const cardCount = cardList.length;
-        const isLastPack = packIds.indexOf(this.packId) === (packIds.length - 1);
-        const activePackIndex = packIds.findIndex(id => id === this.packId);
-        const nextPackIndex = isLastPack ? activePackIndex : activePackIndex + 1;
-        const nextPack = packList[nextPackIndex];
-        const nextPackId = packList[nextPackIndex].id;
+        const index = this.packList.findIndex(pack => pack.id === this.packId);
+        const pack = this.packList[index];
+        this.cardArr = this.cardList.filter(card => card.pack_id === this.packId);
+        const cardCount = this.cardArr.length;
 
         const cardOpen = OpenCard && initialOpenCardIndex !== null ?
             (
                 <Card
-                    cardList={cardList}
+                    cardList={this.cardArr}
                     initialOpenCardIndex={initialOpenCardIndex}
                     count={cardCount}
-                    nextPackId={nextPackId}
-                    nextPack={nextPack}
-                    gameStatus
-                    isLastPack={isLastPack}
                     closeCard={this.closeCard} />
             )
             : null;
         return (
             <TopNav
-                title={'脑计划'}
+                title={pack.packName}
                 router={this.props.router}>
                 <div style={{ height: '100%', width: '100%' }}>
                     {cardOpen}
                     <Carousel
-                        dataSource={cardList}
+                        dataSource={this.cardArr}
                         renderCell={this.renderCardPreview.bind(this)}
                         maxRows={rows}
                         maxCols={cols}

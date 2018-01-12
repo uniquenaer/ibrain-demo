@@ -2,56 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b05ac6d-8b57-4130-b639-46005c45a829" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/1-1.5specialTopic.csv" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/packList.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/data/dataUtils.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packList.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/readIbrainPack.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/PrivateCard.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/CardWhoViewed/CardWhoViewed.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/CardWhoViewed/StudentViewList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/CardWhoViewed/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/CardWhoViewed/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Favor/image/Btn_group@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Favor/image/off@1x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Favor/image/off@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Favor/image/on@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Favor/image/on@3x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Favor/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Favor/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/PrivateCardOpen/img/edit.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/PrivateCardOpen/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/PrivateCardOpen/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/PrivateCardPreview/img/addToPack.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/PrivateCardPreview/img/delCard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/PrivateCardPreview/img/errorBtn.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/PrivateCardPreview/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/PrivateCardPreview/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/Score.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/img/easy.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/img/easy_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/img/expert.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/img/expert_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/img/hard.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/img/hard_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/img/normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/img/normal_active.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/Score/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/VideoCardFront/img/play.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/VideoCardFront/img/play@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/VideoCardFront/img/post@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/VideoCardFront/img/video-post.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/VideoCardFront/img/video-post@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/VideoCardFront/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Card/component/VideoCardFront/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Flipper/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/Flipper/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/common/utils/hashMD5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/cardList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/data/packList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scenes/CardPage/cardList.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scenes/PackPage/packList.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/scenes/PackPage/packList.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/acorn" afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/ansi-html" afterPath="$PROJECT_DIR$/node_modules/.bin/ansi-html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/babylon" afterPath="$PROJECT_DIR$/node_modules/.bin/babylon" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/browserslist" afterPath="$PROJECT_DIR$/node_modules/.bin/browserslist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/cssesc" afterPath="$PROJECT_DIR$/node_modules/.bin/cssesc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/detect" afterPath="$PROJECT_DIR$/node_modules/.bin/detect" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/detect-port" afterPath="$PROJECT_DIR$/node_modules/.bin/detect-port" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/errno" afterPath="$PROJECT_DIR$/node_modules/.bin/errno" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/escodegen" afterPath="$PROJECT_DIR$/node_modules/.bin/escodegen" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/esgenerate" afterPath="$PROJECT_DIR$/node_modules/.bin/esgenerate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/eslint" afterPath="$PROJECT_DIR$/node_modules/.bin/eslint" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/esparse" afterPath="$PROJECT_DIR$/node_modules/.bin/esparse" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/esvalidate" afterPath="$PROJECT_DIR$/node_modules/.bin/esvalidate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/handlebars" afterPath="$PROJECT_DIR$/node_modules/.bin/handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/html-minifier" afterPath="$PROJECT_DIR$/node_modules/.bin/html-minifier" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/import-local-fixture" afterPath="$PROJECT_DIR$/node_modules/.bin/import-local-fixture" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/internal-ip" afterPath="$PROJECT_DIR$/node_modules/.bin/internal-ip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/is-ci" afterPath="$PROJECT_DIR$/node_modules/.bin/is-ci" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/jest-runtime" afterPath="$PROJECT_DIR$/node_modules/.bin/jest-runtime" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/js-yaml" afterPath="$PROJECT_DIR$/node_modules/.bin/js-yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/jsesc" afterPath="$PROJECT_DIR$/node_modules/.bin/jsesc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/json5" afterPath="$PROJECT_DIR$/node_modules/.bin/json5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/loose-envify" afterPath="$PROJECT_DIR$/node_modules/.bin/loose-envify" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/miller-rabin" afterPath="$PROJECT_DIR$/node_modules/.bin/miller-rabin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/mkdirp" afterPath="$PROJECT_DIR$/node_modules/.bin/mkdirp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/multicast-dns" afterPath="$PROJECT_DIR$/node_modules/.bin/multicast-dns" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/react-scripts" afterPath="$PROJECT_DIR$/node_modules/.bin/react-scripts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/regjsparser" afterPath="$PROJECT_DIR$/node_modules/.bin/regjsparser" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/rimraf" afterPath="$PROJECT_DIR$/node_modules/.bin/rimraf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/semver" afterPath="$PROJECT_DIR$/node_modules/.bin/semver" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/sha.js" afterPath="$PROJECT_DIR$/node_modules/.bin/sha.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-conv" afterPath="$PROJECT_DIR$/node_modules/.bin/sshpk-conv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-sign" afterPath="$PROJECT_DIR$/node_modules/.bin/sshpk-sign" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-verify" afterPath="$PROJECT_DIR$/node_modules/.bin/sshpk-verify" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/strip-indent" afterPath="$PROJECT_DIR$/node_modules/.bin/strip-indent" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/svgo" afterPath="$PROJECT_DIR$/node_modules/.bin/svgo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/sw-precache" afterPath="$PROJECT_DIR$/node_modules/.bin/sw-precache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" afterPath="$PROJECT_DIR$/node_modules/.bin/uglifyjs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/uuid" afterPath="$PROJECT_DIR$/node_modules/.bin/uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/webpack" afterPath="$PROJECT_DIR$/node_modules/.bin/webpack" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/webpack-dev-server" afterPath="$PROJECT_DIR$/node_modules/.bin/webpack-dev-server" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/which" afterPath="$PROJECT_DIR$/node_modules/.bin/which" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/readIbrainPack.js" afterPath="$PROJECT_DIR$/scripts/readIbrainPack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/cardList.js" afterPath="$PROJECT_DIR$/src/data/cardList.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/packList.js" afterPath="$PROJECT_DIR$/src/data/packList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Card/component/CardOpen/index.js" afterPath="$PROJECT_DIR$/src/common/Card/component/CardOpen/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/index.js" afterPath="$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/style.css" afterPath="$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Card/component/CardPreview/CardPreview.css" afterPath="$PROJECT_DIR$/src/common/Card/component/CardPreview/CardPreview.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Card/constants.js" afterPath="$PROJECT_DIR$/src/common/Card/constants.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/Card/index.js" afterPath="$PROJECT_DIR$/src/common/Card/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/TopNav/index.js" afterPath="$PROJECT_DIR$/src/common/TopNav/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common/TopNav/topNav.css" afterPath="$PROJECT_DIR$/src/common/TopNav/topNav.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/CardPage/index.js" afterPath="$PROJECT_DIR$/src/scenes/CardPage/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/scenes/PackPage/index.js" afterPath="$PROJECT_DIR$/src/scenes/PackPage/index.js" />
     </list>
@@ -68,53 +79,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/PackPage/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readIbrainPack.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/readIbrainPack.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="320">
+              <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#48#93#0" expanded="true" />
+                <marker date="1515752406000" expanded="true" signature="2983:3472" ph="..." />
+                <marker date="1515752406000" expanded="true" signature="3248:3450" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="packList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/packList.js">
+      <file leaf-file-name="packList_one.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/packList_one.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="240">
+              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scenes/CardPage/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="557">
+              <caret line="70" column="46" lean-forward="true" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#49#94#0" expanded="true" />
@@ -123,17 +117,97 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cardList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/data/cardList.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6358">
-              <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+            <state relative-caret-position="192">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataUtils.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/dataUtils.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#43#85#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="741">
+              <caret line="97" column="6" lean-forward="false" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readIbrainPack.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/readIbrainPack.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>eslint</find>
+      <find>cardList</find>
+      <find>easy</find>
+      <find>c</find>
+      <find>card_title</find>
+      <find>card_titl</find>
+      <find>card_tit</find>
+      <find>card_ti</find>
+      <find>card_t</find>
+      <find>card_</find>
+      <find>card</find>
+      <find>.</find>
+      <find>.ca</find>
+      <find>.card</find>
+      <find>.card_</find>
+      <find>.card_t</find>
+      <find>.card_ti</find>
+      <find>.card_tit</find>
+      <find>.card_titl</find>
+      <find>.card_title</find>
+      <find>packlist</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,11 +216,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/scenes/PackPage/index.js" />
-        <option value="$PROJECT_DIR$/scripts/readIbrainPack.js" />
         <option value="$PROJECT_DIR$/src/data/packList.js" />
         <option value="$PROJECT_DIR$/src/data/cardList.js" />
+        <option value="$PROJECT_DIR$/src/common/TopNav/index.js" />
+        <option value="$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/index.js" />
+        <option value="$PROJECT_DIR$/src/common/Card/constants.js" />
+        <option value="$PROJECT_DIR$/src/common/Card/component/CardOpen/index.js" />
+        <option value="$PROJECT_DIR$/src/common/Card/index.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/scripts/readIbrainPack.js" />
+        <option value="$PROJECT_DIR$/src/data/dataUtils.js" />
         <option value="$PROJECT_DIR$/src/scenes/CardPage/index.js" />
+        <option value="$PROJECT_DIR$/src/common/TopNav/topNav.css" />
+        <option value="$PROJECT_DIR$/src/common/Card/component/CardPreview/CardPreview.css" />
+        <option value="$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/style.css" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/data/packList_one.js" />
+        <option value="$PROJECT_DIR$/src/scenes/PackPage/index.js" />
       </list>
     </option>
   </component>
@@ -286,6 +373,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibrain-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibrain-example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -393,12 +494,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515736387679</updated>
-      <workItem from="1515736389554" duration="2465000" />
+      <workItem from="1515736389554" duration="13234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2465000" />
+    <option name="totallyTimeSpent" value="13234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-331" y="-1080" width="1920" height="1080" extended-state="6" />
@@ -407,6 +508,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -417,7 +519,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -449,13 +550,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/TopNav/index.js">
+    <entry file="file://$PROJECT_DIR$/scripts/1-1.5specialTopic.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -467,47 +566,206 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/PackPage/index.js">
+    <entry file="file://$PROJECT_DIR$/src/data/packList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state relative-caret-position="192">
+          <caret line="8" column="29" lean-forward="false" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/TopNav/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/component/CardPreview/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/component/PackFinished/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/PrivateCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/component/CardOpen/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-647">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#49#94#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="60" column="5" lean-forward="false" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <folding>
+            <element signature="e#71#116#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="97" column="6" lean-forward="false" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/cardList_1.5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4042">
+          <caret line="247" column="23" lean-forward="false" selection-start-line="247" selection-start-column="23" selection-end-line="247" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/readIbrainPack.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/cardList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6358">
-          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        <state relative-caret-position="485">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/packList.js">
+    <entry file="file://$PROJECT_DIR$/src/data/dataUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#43#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/TopNav/topNav.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Carousel/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5322">
+          <caret line="269" column="49" lean-forward="true" selection-start-line="269" selection-start-column="49" selection-end-line="269" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/component/CardPreview/CardPreview.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1107">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="2" selection-end-line="38" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/common/Card/component/CardOpenContainer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/CardPage/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="557">
+          <caret line="70" column="46" lean-forward="true" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#49#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/packList_one.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/PackPage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="76" column="49" lean-forward="false" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#48#93#0" expanded="true" />
+            <marker date="1515752406000" expanded="true" signature="2983:3472" ph="..." />
+            <marker date="1515752406000" expanded="true" signature="3248:3450" ph="..." />
           </folding>
         </state>
       </provider>

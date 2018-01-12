@@ -17,24 +17,26 @@
     left: 0;
     right: 0;
     z-index: 100;
-    width: 914px;
-    height: 643px;
+    max-width: 914px;
+    max-height: 643px;
+    width: 90vw;
+    height: 75vh;
     margin: auto;
 }
 
-@media (max-width: 1260px), (max-height: 900px) {
-    .card-open-container {
-        width: 790px;
-        height: 520px;
-    }
-}
+/*@media (max-width: 1260px), (max-height: 900px) {*/
+/*.card-open-container {*/
+/*width: 790px;*/
+/*height: 520px;*/
+/*}*/
+/*}*/
 
-@media (max-width: 1000px), (max-height: 700px) {
-    .card-open-container {
-        width: 368px;
-        height: 529px;
-    }
-}
+/*@media (max-width: 1000px), (max-height: 700px) {*/
+/*.card-open-container {*/
+/*width: 368px;*/
+/*height: 529px;*/
+/*}*/
+/*}*/
 
 .card-open-container-btn {
     position: absolute;

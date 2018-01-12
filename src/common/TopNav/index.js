@@ -15,7 +15,7 @@ export default class TopNav extends PureComponent {
 
     renderLeftPosition = () => {
         const { leftComponent, title, router, step } = this.props;
-        if (!leftComponent) return (<GoBack title={title || '开智学堂'}
+        if (!leftComponent) return (<GoBack title={title || null}
                                             router={router}
                                             step={step || 2} />);
         return leftComponent();

@@ -8,7 +8,7 @@ class App extends Component {
     render() {
         return (
             <Router history={browserHistory}>
-                <Route path="packs">
+                <Route path="packs/:data_source">
                     <IndexRoute component={PackPage} />
                     <Route path="cards/:pack_id" component={CardPage} />
                 </Route>

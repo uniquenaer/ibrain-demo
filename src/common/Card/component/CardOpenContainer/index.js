@@ -47,42 +47,36 @@ export default class CardOpenContainer extends PureComponent {
         }
     }
 
-
     touchStart = (e) => {
+        // e.preventDefault();
+        e.stopPropagation();
         this.setState({
             moving: true
         });
-        // e.preventDefault();
-        e.stopPropagation();
         this.startX = e.changedTouches[0].pageX;
         this.startY = e.changedTouches[0].pageY;
     };
 
     changeCard = (e) => {
-        const { prevCard, nextCard } = this.props;
         // e.preventDefault();
         e.stopPropagation();
         const { moving } = this.state;
+        if (!moving) return;
+
+        const { prevCard, nextCard } = this.props;
         const moveEndX = e.changedTouches[0].pageX;
         const moveEndY = e.changedTouches[0].pageY;
         const X = moveEndX - this.startX;
         const Y = moveEndY - this.startY;
-        if (!moving) return;
 
         if (Math.abs(X) > Math.abs(Y) && X > 0) {
             this.setState({ changeCardDirection: 'prev', moving: false }, () => {
-                prevCard();
-                console.log("left 2 right");
+                prevCard && prevCard();
             });
         } else if (Math.abs(X) > Math.abs(Y) && X < 0) {
             this.setState({ changeCardDirection: 'next', moving: false }, () => {
-                nextCard();
-                console.log("right 2 left");
+                nextCard && nextCard();
             });
-        } else if (Math.abs(Y) > Math.abs(X) && Y > 0) {
-            console.log("top 2 bottom");
-        } else if (Math.abs(Y) > Math.abs(X) && Y < 0) {
-            console.log("bottom 2 top");
         }
     };
 

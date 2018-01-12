@@ -12,17 +12,16 @@ class Card extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            openCardIndex: 0,
+            openCardIndex: props.initialOpenCardIndex,
         };
         this.closeCard = this.closeCard.bind(this);
         this.nextCard = this.nextCard.bind(this);
         this.prevCard = this.prevCard.bind(this);
-        this.toNextPack = this.toNextPack.bind(this);
     }
 
     render() {
         const { openCardIndex } = this.state;
-        const { count, gameStatus, cardList,} = this.props;
+        const { count, gameStatus, cardList, } = this.props;
 
         const footer = `${openCardIndex + 1} / ${count}`;
         return (
@@ -32,7 +31,7 @@ class Card extends PureComponent {
                 prevCard={openCardIndex === 0 ? null : this.prevCard}
                 footer={footer}>
                 <CardOpen
-                    card={cardList[openCardIndex]}/>
+                    card={cardList[openCardIndex]} />
 
             </CardOpenContainer>
         );
@@ -59,15 +58,6 @@ class Card extends PureComponent {
         this.setState(prevState => ({
             openCardIndex: prevState.openCardIndex - 1,
         }));
-    }
-
-    toNextPack() {
-        const { nextPackId, gameStatus, router } = this.props;
-        if (nextPackId && gameStatus) {
-            router.push({
-                pathname: `/packs/cards/${nextPackId}`,
-            });
-        }
     }
 
 }

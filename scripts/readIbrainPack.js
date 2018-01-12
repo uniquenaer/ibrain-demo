@@ -44,8 +44,8 @@ parse(rawCsv, { header: true, skip_empty_lines: true }, function (err, output) {
             cardArr.push(card)
         }
     });
-    fs.writeFile(path.join(__dirname, '../src/data/packList.js'), `const packList = ${JSON.stringify(packArr)}; export default packList`, 'utf8');
-    fs.writeFile(path.join(__dirname, '../src/data/cardList.js'), `const cardList = ${JSON.stringify(cardArr)}; export default cardList`, 'utf8');
+    fs.writeFile(path.join(__dirname, '../src/data/packList_one.js'), `const packList_one = ${JSON.stringify(packArr)}; export default packList_one`, 'utf8');
+    fs.writeFile(path.join(__dirname, '../src/data/cardList_one.js'), `const cardList_one = ${JSON.stringify(cardArr)}; export default cardList_one`, 'utf8');
 });
 
 
