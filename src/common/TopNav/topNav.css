@@ -1,6 +1,6 @@
 .single-main {
     overflow: auto;
-    height: 100%;
+    height: calc(100% - 50px);
 }
 
 .top-nav .top-bar {

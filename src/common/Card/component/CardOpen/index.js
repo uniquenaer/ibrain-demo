@@ -18,28 +18,22 @@ const IMG_REGEXP = new RegExp(
 
 
 export default class CardOpen extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.renderFront = this.renderFront.bind(this);
-    }
 
-    componentDidUpdate() {
-        document.querySelector('.card-main-content').scrollTo(0, 0)
+    componentDidUpdate(prevProps, prevState) {
+        const target = document.getElementById('card-main-content');
+        target.scrollTop = 0;
     };
 
     render() {
         const { card } = this.props;
-        const { renderFront } = this;
-        const front = renderFront(card);
-
         return (
             <div className="card-open-wrap">
-                {front}
+                {this.renderFront(card)}
             </div>
         );
     }
 
-    renderFront(card) {
+    renderFront = (card) => {
 
         const front_content = card.front_content;
 
@@ -49,28 +43,16 @@ export default class CardOpen extends PureComponent {
             containerClassList.push(card.type);
         }
 
-
-        const contentClassList = ['card-main-content'];
-        if (
-            CARD_TYPE_WITH_ONLY_MARKDOWN.includes(card.type) &&
-            front_content.length <= 100 &&
-            !IMG_REGEXP.test(front_content)
-        ) {
-            contentClassList.push('less-content');
-        }
-
         return (
             <div className={containerClassList.join(' ')}>
-                <div className={contentClassList.join(' ')}>
+                <div className="card-main-content" id="card-main-content">
                     <h2 className="card-title">{card.name}</h2>
-                    <Markdown
-                        src={front_content}
-                        extension={card.extension} />
+                    <Markdown src={front_content} />
                 </div>
-                {CARD_TYPE_WITH_GRADIENT.includes(card.type) && this.renderGradient()}
+                {this.renderGradient()}
             </div>
         );
-    }
+    };
 
     renderGradient() {
         return (

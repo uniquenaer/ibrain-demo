@@ -21,19 +21,19 @@ export default class CardOpenContainer extends PureComponent {
             changeCardDirection: null,
             moving: false,
         }
-    }
+    };
 
     componentWillMount() {
         window.addEventListener('keydown', this._onKeyPress);
         document.body.addEventListener('touchstart', this.touchStart);
         document.body.addEventListener('touchmove', this.changeCard);
-    }
+    };
 
     componentWillUnmount() {
         window.removeEventListener('keydown', this._onKeyPress);
         document.body.removeEventListener('touchstart', this.touchStart);
         document.body.removeEventListener('touchmove', this.changeCard);
-    }
+    };
 
     _onKeyPress(e) {
         const { nextCard, prevCard, showMoreViewer } = this.props;
@@ -45,7 +45,7 @@ export default class CardOpenContainer extends PureComponent {
             e.preventDefault();
             return this.props.prevCard();
         }
-    }
+    };
 
     touchStart = (e) => {
         // e.preventDefault();
@@ -92,7 +92,7 @@ export default class CardOpenContainer extends PureComponent {
                 {this.renderFooter()}
             </div>
         );
-    }
+    };
 
     renderNextBtn() {
         const { nextCard, showMoreViewer } = this.props;
@@ -103,7 +103,7 @@ export default class CardOpenContainer extends PureComponent {
                 </button>
             );
         }
-    }
+    };
 
     renderPrevBtn() {
         const { prevCard, showMoreViewer } = this.props;
@@ -114,7 +114,7 @@ export default class CardOpenContainer extends PureComponent {
                 </button>
             );
         }
-    }
+    };
 
     renderClose() {
         const { closeCard, showMoreViewer } = this.props;
@@ -125,12 +125,12 @@ export default class CardOpenContainer extends PureComponent {
                 </button>
             );
         }
-    }
+    };
 
     renderFooter() {
         return (<div className="card-open-container-footer">
             {this.props.footer}
         </div>);
-    }
+    };
 }
 

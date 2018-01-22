@@ -5,9 +5,9 @@
 }
 
 .carousel {
+    padding-top: 10%;
     margin: auto;
-    padding-top: 10vh;
-    height: 100%;
+    height: 90%;
 }
 
 .page-flex {
@@ -16,7 +16,6 @@
     /*height:410px;*/
     /* TODO: height adjust*/
     background-color: transparent;
-
 }
 
 .page-list {

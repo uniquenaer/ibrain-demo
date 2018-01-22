@@ -23,7 +23,7 @@ class CardPage extends PureComponent {
         };
         this.packList = dataUtils[data_source] && dataUtils[data_source].packList;
         this.cardList = dataUtils[data_source] && dataUtils[data_source].cardList;
-    }
+    };
 
     componentWillReceiveProps(nextProps) {
         // if (nextProps.cardList) {
@@ -38,14 +38,14 @@ class CardPage extends PureComponent {
                 initialOpenCardIndex: null,
             });
         }
-    }
+    };
 
 
     renderCardPreview(card) {
         return (
             <CardPreview key={card.id} card={card} onClickCard={this.onClickCard} />
         );
-    }
+    };
 
     onClickCard = (id) => {
         const index = this.cardArr.findIndex(card => card.id === id);
