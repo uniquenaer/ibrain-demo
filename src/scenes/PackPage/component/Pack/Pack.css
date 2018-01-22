@@ -54,10 +54,6 @@
    margin-bottom: 0;
     color: #63676c;
 }
-/*div[data-tag="部落"] .pack{*/
-    /*background: url("./images/group_bg.png") no-repeat top center;*/
-    /*background-size: contain;*/
-/*}*/
 
 div .pack.locked {
     background: url("./images/pack_locked_bg.png") no-repeat top center;

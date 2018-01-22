@@ -38,7 +38,7 @@ export default class CardPreview extends PureComponent {
         }
 
         return (
-            <div className="flex-center card-type">
+            <div className="card-type">
                 <img src={cardTypeImg} alt="card type" />
             </div>
         );
@@ -46,6 +46,7 @@ export default class CardPreview extends PureComponent {
 
     onClick(e) {
         e.preventDefault();
+        console.log(3);
         this.props.onClickCard(this.props.card.id);
     }
 }

@@ -232,10 +232,11 @@ class Carousel extends PureComponent {
                     {dataSource.slice(i * cellsPerPage, i !== pages ? (i + 1) * cellsPerPage : dataSource.length).map(cell => (
                         <div
                             key={cell.id}
-                            className="flex-center"
+                            className="page-item"
                             style={{
                                 width: `${pageSlideWidth / cols}px`,
                                 height: `${pageSlideHeight / rows}px`,
+                                margin: 'auto',
                             }}>
                             {renderCell(cell)}
                         </div>
@@ -247,6 +248,7 @@ class Carousel extends PureComponent {
         const trackStyle = {
             width: `${pages * pageSlideWidth}px`,
             transform: `translate(${-pageSlideWidth * (activePageIndex - 1)}px, 0px)`,
+            WebkitTransform: `translate(${-pageSlideWidth * (activePageIndex - 1)}px, 0px)`,
             // transitionDuration: '0.8s',
         };
         // when resizing event fires, cancel transitionDuration to an invisible speed

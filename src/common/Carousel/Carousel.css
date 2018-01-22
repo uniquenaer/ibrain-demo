@@ -1,16 +1,13 @@
 .carousel-container {
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    /*margin-top: 69px;*/
-    flex: 1;
-    /*min-width: 760px;*/
     background-color: #f6f6f6;
 }
 
 .carousel {
     margin: auto;
+    padding-top: 10vh;
+    height: 100%;
 }
 
 .page-flex {
@@ -19,18 +16,17 @@
     /*height:410px;*/
     /* TODO: height adjust*/
     background-color: transparent;
-    /*margin: 5px;*/
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    flex-wrap: wrap;
+
 }
 
 .page-list {
     overflow: hidden;
     /*max-height: 630px;*/
+}
+
+.page-item {
+    margin: auto;
+    display: inline-table;
 }
 
 .carousel-container .arrow {
