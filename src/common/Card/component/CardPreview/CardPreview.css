@@ -12,7 +12,7 @@
     background: #fff;
     border-radius: 6px;
     box-shadow: 0 2px 4px 0 #aaaaaa;
-    margin: 3%;
+    margin: auto;
 }
 
 .card-preview-bottom {
@@ -54,7 +54,7 @@
 }
 
 .card-preview img {
-    display: block;
+    /*display: block;*/
     max-height: 25px;
     /*max-width: 25px;*/
 }

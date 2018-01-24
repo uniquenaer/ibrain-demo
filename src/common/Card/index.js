@@ -17,48 +17,46 @@ class Card extends PureComponent {
         this.closeCard = this.closeCard.bind(this);
         this.nextCard = this.nextCard.bind(this);
         this.prevCard = this.prevCard.bind(this);
-    }
+    };
 
     render() {
         const { openCardIndex } = this.state;
-        const { count, gameStatus, cardList, } = this.props;
-
+        const { count, cardList, } = this.props;
         const footer = `${openCardIndex + 1} / ${count}`;
         return (
             <CardOpenContainer
                 closeCard={this.closeCard}
-                nextCard={openCardIndex === count - 1 && !gameStatus ? null : this.nextCard}
+                nextCard={openCardIndex === count - 1 ? null : this.nextCard}
                 prevCard={openCardIndex === 0 ? null : this.prevCard}
                 footer={footer}>
                 <CardOpen
                     card={cardList[openCardIndex]} />
-
             </CardOpenContainer>
         );
-    }
+    };
 
 
     closeCard() {
         this.props.closeCard();
-    }
+    };
 
     nextCard() {
-        const { gameStatus, count } = this.props;
+        const { count } = this.props;
         const { openCardIndex } = this.state;
-        if (!gameStatus && openCardIndex === count - 1) {
+        if (openCardIndex === count - 1) {
             return;
         }
         this.setState(prevState => ({
             openCardIndex: prevState.openCardIndex + 1,
         }));
-    }
+    };
 
     prevCard() {
         if (this.state.openCardIndex === 0) return;
         this.setState(prevState => ({
             openCardIndex: prevState.openCardIndex - 1,
         }));
-    }
+    };
 
 }
 

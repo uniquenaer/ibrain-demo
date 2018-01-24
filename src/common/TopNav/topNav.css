@@ -1,9 +1,6 @@
 .single-main {
     overflow: auto;
-    /*min-width: 760px;*/
-    display: flex;;
-    flex: 1;
-    flex-direction: column;
+    height: calc(100% - 50px);
 }
 
 .top-nav .top-bar {
@@ -15,7 +12,6 @@
     border-bottom: 1px solid #dde5e9;
     z-index: 99;
     box-shadow: 0 1px 3px 0 rgba(167, 167, 167, 0.58);
-    display: flex;
 }
 
 .top-nav .go_back {
@@ -28,8 +24,6 @@
     word-wrap: break-word;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100%;
 }
 
 .top-nav .go_back img {
@@ -39,8 +33,10 @@
 }
 
 .top-bar-left, .top-bar-center, .top-bar-right {
-    flex: 1;
     text-align: center;
     line-height: 100%;
     color: #474747;
+    float: left;
+    width: 33.3%;
+    height: 100%;
 }
