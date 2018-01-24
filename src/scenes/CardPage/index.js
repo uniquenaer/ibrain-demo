@@ -72,7 +72,7 @@ class CardPage extends PureComponent {
         const pack = this.packList[index];
         const card = {
             "id": "0",
-            "name": "学点脑科学",
+            "name": "问卷调查",
             "front_content": "http://ibrianclub.mikecrm.com/71aZkrO",
             "pack_id": "",
             "status": "FINISH",
