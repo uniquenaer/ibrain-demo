@@ -46,7 +46,6 @@ export default class CardPreview extends PureComponent {
 
     onClick(e) {
         e.preventDefault();
-        console.log(3);
         this.props.onClickCard(this.props.card.id);
     }
 }

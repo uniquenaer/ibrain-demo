@@ -11,16 +11,12 @@
 }
 
 .page-flex {
-    /*width: 650px;*/
     float: left;
-    /*height:410px;*/
-    /* TODO: height adjust*/
     background-color: transparent;
 }
 
 .page-list {
     overflow: hidden;
-    /*max-height: 630px;*/
 }
 
 .page-item {

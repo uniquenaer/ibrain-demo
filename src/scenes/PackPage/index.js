@@ -1,6 +1,3 @@
-/**
- * Created by nanhuijuan on 2016/12/26.
- */
 import React, { PureComponent } from 'react';
 import moment from 'moment';
 import Carousel from '../../common/Carousel';
@@ -13,8 +10,9 @@ const cols = 4;
 class PackPage extends PureComponent {
     constructor(props) {
         super(props);
+        const defaultTime = window.sessionStorage.getItem('activeTime');
         this.state = {
-            activeTime: moment().subtract(5, 'days').format("MM/DD/YYYY"),
+            activeTime: defaultTime || moment().subtract(8, 'days').format("MM/DD/YYYY"),
             // activeTime: moment().format("MM/DD/YYYY"),
         };
         this.MaxTime = moment().format("MM/DD/YYYY");
@@ -50,7 +48,7 @@ class PackPage extends PureComponent {
                 : moment(activeTime).subtract(1, 'day').format("MM/DD/YYYY");
             return { activeTime: nextActiveTime }
         }, () => {
-            console.log(this.state.activeTime);
+            window.sessionStorage.setItem('activeTime', this.state.activeTime)
         });
     };
 

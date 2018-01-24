@@ -26,11 +26,6 @@ class CardPage extends PureComponent {
     };
 
     componentWillReceiveProps(nextProps) {
-        // if (nextProps.cardList) {
-        //     this.setState({
-        //         visibleCardList: nextProps.cardList,
-        //     });
-        // }
         if (nextProps.params.pack_id !== this.props.params.pack_id) {
             this.packId = nextProps.params.pack_id;
             this.setState({
@@ -65,6 +60,7 @@ class CardPage extends PureComponent {
 
     render() {
         const { OpenCard, initialOpenCardIndex } = this.state;
+        const { data_source } = this.props.params;
         const index = this.packList && this.packList.findIndex(pack => pack.id === this.packId);
         if (index == null || index === -1) return (
             <TopNav
@@ -74,7 +70,18 @@ class CardPage extends PureComponent {
             </TopNav>
         );
         const pack = this.packList[index];
+        const card = {
+            "id": "0",
+            "name": "学点脑科学",
+            "front_content": "http://ibrianclub.mikecrm.com/71aZkrO",
+            "pack_id": "",
+            "status": "FINISH",
+            "type": "exam"
+        };
         this.cardArr = this.cardList.filter(card => card.pack_id === this.packId);
+        if (data_source === 'demo') {
+            this.cardArr.push(card);
+        }
         const cardCount = this.cardArr.length;
 
         const cardOpen = OpenCard && initialOpenCardIndex !== null ?

@@ -23,6 +23,10 @@ const dataUtils = {
         cardList: cardList_three,
         packList: packList_three
     },
+    'demo': {
+        cardList: cardList_one,
+        packList: packList_one
+    }
 };
 
 export default dataUtils;
