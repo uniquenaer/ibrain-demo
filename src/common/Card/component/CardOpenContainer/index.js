@@ -25,13 +25,13 @@ export default class CardOpenContainer extends PureComponent {
 
     componentWillMount() {
         window.addEventListener('keydown', this._onKeyPress);
-        window.addEventListener('touchstart', this.touchStart);
+        document.body.addEventListener('touchstart', this.touchStart);
         document.body.addEventListener('touchmove', this.changeCard);
     };
 
     componentWillUnmount() {
         window.removeEventListener('keydown', this._onKeyPress);
-        window.removeEventListener('touchstart', this.touchStart);
+        document.body.removeEventListener('touchstart', this.touchStart);
         document.body.removeEventListener('touchmove', this.changeCard);
     };
 
@@ -50,7 +50,7 @@ export default class CardOpenContainer extends PureComponent {
     touchStart = (e) => {
         // e.preventDefault();
         console.log('touch');
-        // e.stopPropagation();
+        e.stopPropagation();
         this.setState({
             moving: true
         });
@@ -60,7 +60,7 @@ export default class CardOpenContainer extends PureComponent {
 
     changeCard = (e) => {
         // e.preventDefault();
-        // e.stopPropagation();
+        e.stopPropagation();
         const { moving } = this.state;
         if (!moving) return;
 

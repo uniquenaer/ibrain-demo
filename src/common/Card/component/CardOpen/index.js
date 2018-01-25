@@ -27,10 +27,6 @@ export default class CardOpen extends PureComponent {
         window.addEventListener && window.addEventListener("message", this.getHeight, !1);
     }
 
-    test = () => {
-        console.log('test');
-    };
-
     componentDidUpdate(prevProps, prevState) {
         const target = document.getElementById('card-main-content');
         if (prevState && !prevState.iframeHeight && target) {
@@ -75,7 +71,6 @@ export default class CardOpen extends PureComponent {
                     ref="iframe"
                     onLoad={() => {
                         this.refs.iframe.contentWindow.postMessage(JSON.stringify({ cif: 1 }), "*");
-                        console.log(this.refs);
                     }}
                     style={{
                         display: 'block',
