@@ -78,8 +78,17 @@ class CardPage extends PureComponent {
             "status": "FINISH",
             "type": "exam"
         };
+        const videoCard = {
+            "id": "1",
+            "name": "开智部落玩法简介",
+            "front_content": "http://1931.vod.myqcloud.com/1931_8b39d8e0c5b011e6bc811bda67685817.f30.mp4",
+            "pack_id": "",
+            "status": "FINISH",
+            "type": "video"
+        };
         this.cardArr = this.cardList.filter(card => card.pack_id === this.packId);
         if (data_source === 'demo') {
+            this.cardArr.push(videoCard);
             this.cardArr.push(card);
         }
         const cardCount = this.cardArr.length;

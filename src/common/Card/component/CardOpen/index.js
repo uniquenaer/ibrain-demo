@@ -6,6 +6,7 @@ import React, { PureComponent } from 'react';
 import Markdown from '../../../../common/markdown';
 import './style.css';
 import { CARD_TYPE } from '../../constants';
+import VideoCardFront from '../VideoCardFront';
 
 const CARD_TYPE_WITH_GRADIENT = ['action', 'power', 'remember'];
 const CARD_TYPE_WITH_ONLY_MARKDOWN = ['action', 'power', 'remember'];
@@ -23,25 +24,22 @@ export default class CardOpen extends PureComponent {
     };
 
     componentDidMount() {
-        this.target = document.getElementById('card-main-content');
         window.addEventListener && window.addEventListener("message", this.getHeight, !1);
-        this.refs.iframe.addEventListener('touchStart', this.test)
     }
 
     test = () => {
-        console.log('touch');
-    }
+        console.log('test');
+    };
 
     componentDidUpdate(prevProps, prevState) {
-        if (prevState && !prevState.iframeHeight) {
-            this.target = document.getElementById('card-main-content');
-            this.target.scrollTop = 0;
+        const target = document.getElementById('card-main-content');
+        if (prevState && !prevState.iframeHeight && target) {
+            target.scrollTop = 0;
         }
     };
 
     componentWillUnmount() {
         window.removeEventListener && window.removeEventListener("message", this.getHeight, !1);
-        this.refs.iframe.removeEventListener('touchStart', this.test)
     };
 
     getHeight = (b) => {
@@ -65,16 +63,19 @@ export default class CardOpen extends PureComponent {
 
     renderExam = (front_content) => {
         const { iframeHeight } = this.state;
+
+
         return (
             <div className="card-main-content" id="card-main-content"
                  style={{ padding: '0', borderRadius: '10px' }}>
                 <iframe
                     src={front_content}
                     frameBorder="0"
-                    scrolling="no"
+                    // scrolling="no"
                     ref="iframe"
                     onLoad={() => {
-                        this.refs.iframe.contentWindow.postMessage(JSON.stringify({ cif: 1 }), "*")
+                        this.refs.iframe.contentWindow.postMessage(JSON.stringify({ cif: 1 }), "*");
+                        console.log(this.refs);
                     }}
                     style={{
                         display: 'block',
@@ -107,11 +108,28 @@ export default class CardOpen extends PureComponent {
         if (CARD_TYPE[card.type.toUpperCase()]) {
             containerClassList.push(card.type);
         }
-        return (
-            <div className={containerClassList.join(' ')}>
-                {card.type === 'exam' ? this.renderExam(front_content) : this.renderPower(card)}
-            </div>
-        );
+
+        switch (card.type) {
+            case CARD_TYPE.EXAM:
+                return (
+                    <div className={containerClassList.join(' ')}>
+                        {this.renderExam(front_content)}
+                    </div>
+                );
+
+            case CARD_TYPE.VIDEO:
+                return (
+                    <div className="card-open-main card-open-main-video">
+                        <VideoCardFront card={card} ref={video => this.video = video} />
+                    </div>
+                );
+            default:
+                return (
+                    <div className={containerClassList.join(' ')}>
+                        {this.renderPower(card)}
+                    </div>
+                )
+        }
     };
 
     renderGradient = () => {

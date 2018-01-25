@@ -1,0 +1,162 @@
+.plyr__play-large {
+    opacity: .7;
+}
+.chapter-video-content {
+    width: 100%;
+    height: 400px;
+    background: url('http://webstatic.openmindclub.com/video-bg.png') repeat-x;
+    background-size: 61px 100%;
+    display: flex;
+    position: relative;
+}
+.video-ui {
+    /*height: 400px;*/
+    margin: auto;
+    background: #000;
+}
+.video-ui.fixed {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    transform: scale(.5);
+    z-index: 999;
+}
+.video-ui .video-tools {
+    height: 0;
+    opacity: 0;
+}
+.video-ui.fixed .video-tools {
+    opacity: 1;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    transform: translateY(-100%);
+    box-shadow:0 0 3px rgba(167,167,167,0.58);
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius:0;
+    border-bottom-right-radius:0;
+    cursor: move;
+}
+
+.video-ui.fixed .video-tools .close {
+    display: inline-block;
+    width: 40px;
+    font-size: 27px;
+    line-height: 40px;
+    color: #a8a6a6;
+    cursor: pointer;
+}
+.video-ui .plyr--setup {
+    height: 100%;
+    background: url('http://webstatic.openmindclub.com/video-bg.png') repeat-x;
+    background-size: 61px 100%;
+}
+.video-ui .plyr__controls {
+    background:rgba(6,6,6,0.61);
+    padding: 0;
+    height: 58px;
+    width: inherit;
+}
+
+.video-ui .plyr__controls button svg,
+.video-ui .plyr__controls button[data-plyr='mute'] svg,
+.video-ui .plyr .plyr__play-large svg {
+    display: none;
+}
+
+.video-ui .plyr__controls button {
+    width: 36px;
+    height: 36px;
+    margin-left: 26px;
+}
+/*play pause*/
+.video-ui .plyr__controls button[data-plyr='pause'] {
+    background: url('./images/play.png') center center no-repeat;
+    background-size: cover;
+}
+
+.video-ui .plyr__controls button[data-plyr='play'] {
+    background: url('./images/pause.png') center center no-repeat;
+    background-size: cover;
+}
+/*时间*/
+.video-ui .plyr__controls .plyr__progress,
+.plyr__controls>button {
+    margin-left: 20px;
+}
+.video-ui .plyr__controls .plyr__progress {
+    margin-right: 13px;
+}
+.video-ui .plyr__progress--played,
+.video-ui .plyr__volume--display {
+    color: #e75151;
+}
+.video-ui .plyr__progress--buffer,
+.video-ui .plyr__progress--played,
+.video-ui .plyr__volume--display {
+    height: 4px;
+    margin: -2px 0 0 ;
+    background: #5d5d5d;
+    border-radius: 2px;
+}
+.video-ui .plyr input[type=range]::-webkit-slider-thumb{
+    width:16px;
+    height: 16px;
+    background:#eee;
+}
+.video-ui .plyr input[type=range]:active::-webkit-slider-thumb{
+    background:#eee;
+    border:none;
+    transform:scale(1)
+}
+
+.video-ui .plyr__time{
+    font-size:16px;
+    color:#adadad;
+    margin: 0;
+}
+
+.video-ui .plyr__time + .plyr__time::before {
+    margin: 0 5px;
+}
+/*volume*/
+.video-ui .plyr__controls button[data-plyr='mute'] {
+    width: 30px;
+    height: 30px;
+}
+.video-ui .plyr__controls button[data-plyr='mute'][aria-pressed="false"] {
+    background: url('./images/volume.png') center center no-repeat;
+    background-size: cover;
+}
+.video-ui .plyr__controls button[data-plyr='mute'][aria-pressed="true"] {
+    background: url('./images/muted.png') center center no-repeat;
+    background-size: cover;
+}
+
+/*fullscreen*/
+.video-ui .plyr__controls button[data-plyr='fullscreen'] {
+    width: 28px;
+    height: 28px;
+    margin-right: 21px;
+}
+.video-ui .plyr__controls button[data-plyr='fullscreen'][aria-pressed="false"] {
+    background: url('./images/fullscreen.png') center center no-repeat;
+    background-size: cover;
+}
+.video-ui .plyr__controls button[data-plyr='fullscreen'][aria-pressed="true"] {
+    background: url('./images/esc-fullscreen.png') center center no-repeat;
+    background-size: cover;
+}
+.video-ui .plyr__controls .plyr__play-large svg {
+    display: none;
+}
+.video-ui .plyr .plyr__play-large {
+    width: 80px;
+    height: 80px;
+    background: url('./images/play-large.png')  no-repeat;
+    background-size: cover;
+    border: none;
+}
