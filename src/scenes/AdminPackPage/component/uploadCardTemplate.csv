@@ -1,0 +1,39 @@
+group_name,pack_name,card_title,card_content,release_date,card_type
+3specialTopic,好文采，坏文采,"""提交学习笔记，进入下一关！""","* 这个游戏也适合三个人玩，叫上爸爸呗！
+* 你还可以和宝宝阅读跟害怕有关的绘本，如《走开，绿色的大怪兽！》。
+* 如果你也怕黑，和孩子分享一两件你怕黑的小事，让孩子明白，怕黑是正常的。
+
+![](http://pics.ibrainbaby.cn/pic.005.jpg)",2018/1/13, power
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+备注：每一项都必须填写，不能为空,,,,,
+1,group_name,"生成不同的链接，展示不同的卡包，
+不能为中文，可以是英文数字组合","http://test.ibrainbaby.cn/packs/1.5specialTopic?page=1
+http://test.ibrainbaby.cn/packs/3fixedTopic?page=1
+http://test.ibrainbaby.cn/packs/3specialTopic?page=1",,
+2,pack_name,卡包的名称,,,
+3,card_title,卡片的名称,,,
+4,card_content,卡片的内容,,,
+5,release_date,开放阅读的日期,日期格式必须统一为：2018/1/13,,
+6,card_type,"power：默认
+exam:测评卡片
+video：视频卡",,,
+,,默认卡片的顺序就是从上到下依次展示,,,

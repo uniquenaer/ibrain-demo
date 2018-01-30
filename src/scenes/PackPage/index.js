@@ -19,6 +19,7 @@ class PackPage extends PureComponent {
         this.minTime = moment('2018-01-13').format("MM/DD/YYYY");
         const { data_source } = props.params;
         this.packList = dataUtils[data_source] && dataUtils[data_source].packList;
+        console.log(this.packList);
     }
 
     renderPack(pack) {

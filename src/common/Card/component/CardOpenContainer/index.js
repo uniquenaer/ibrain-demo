@@ -49,7 +49,7 @@ export default class CardOpenContainer extends PureComponent {
 
     touchStart = (e) => {
         // e.preventDefault();
-        console.log('touch');
+        // console.log('touch');
         e.stopPropagation();
         this.setState({
             moving: true
