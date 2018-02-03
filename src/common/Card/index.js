@@ -23,6 +23,7 @@ class Card extends PureComponent {
         const { openCardIndex } = this.state;
         const { count, cardList, } = this.props;
         const footer = `${openCardIndex + 1} / ${count}`;
+        console.log(cardList[openCardIndex], cardList, openCardIndex);
         return (
             <CardOpenContainer
                 closeCard={this.closeCard}

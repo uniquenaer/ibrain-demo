@@ -2,19 +2,11 @@
  * Created by wangna on 2018/1/29.
  */
 import React from 'react';
-import { Button, Popconfirm, Tooltip } from 'antd';
+import { Button, Popconfirm } from 'antd';
 import EditableCell from './component/EditableCell';
 
 export default function columns(onDelete, onCellChange) {
     return [
-        {
-            title: '展示地址',
-            dataIndex: 'group_name',
-            width: '10%',
-            render: (text, record) => <a
-                href={`${window.location.origin}/packs/${text}`}
-                target="_blank">{text}</a>
-        },
         {
             title: '卡包名称',
             dataIndex: 'pack_name',
@@ -23,7 +15,7 @@ export default function columns(onDelete, onCellChange) {
                 type="input"
                 value={text}
                 onChange={(value) => {
-                    onCellChange(record._id, { 'pack_name': value })
+                    onCellChange && onCellChange(record._id, { 'pack_name': value })
                 }}
             />)
         },
@@ -35,18 +27,18 @@ export default function columns(onDelete, onCellChange) {
                 type="input"
                 value={text}
                 onChange={(value) => {
-                    onCellChange(record._id, { 'card_title': value })
+                    onCellChange && onCellChange(record._id, { 'card_title': value })
                 }}
             />)
         }, {
             title: '卡片内容',
             dataIndex: 'card_content',
-            width: '30%',
+            width: '40%',
             render: (text, record) => (<EditableCell
                 type="textarea"
                 value={text}
                 onChange={(value) => {
-                    onCellChange(record._id, { 'card_content': value })
+                    onCellChange && onCellChange(record._id, { 'card_content': value })
                 }}
             />)
         }, {
@@ -58,7 +50,7 @@ export default function columns(onDelete, onCellChange) {
                 type="select"
                 optionsArr={["power", "exam", "video"]}
                 onChange={(value) => {
-                    onCellChange(record._id, { 'card_type': value })
+                    onCellChange && onCellChange(record._id, { 'card_type': value })
                 }}
             />)
         }, {
@@ -69,9 +61,13 @@ export default function columns(onDelete, onCellChange) {
                 type="DatePicker"
                 value={text}
                 onChange={(value) => {
-                    onCellChange(record._id, { 'release_date': value })
+                    onCellChange && onCellChange(record._id, { 'release_date': value })
                 }}
             />)
+        }, {
+            title: '顺序',
+            dataIndex: 'order_code',
+            width: '5%',
         }, {
             title: '操作',
             dataIndex: 'action',
@@ -79,7 +75,7 @@ export default function columns(onDelete, onCellChange) {
             render: (text, record) => (
                 <Popconfirm
                     title={[<p key={0}>确定删除此卡片么?</p>]}
-                    onConfirm={() => onDelete(record._id)}
+                    onConfirm={() => onDelete && onDelete(record._id)}
                     placement="topRight">
                     <Button icon="delete" size="small" />
                 </Popconfirm>

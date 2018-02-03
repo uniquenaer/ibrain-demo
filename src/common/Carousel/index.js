@@ -231,7 +231,7 @@ class Carousel extends PureComponent {
                 <div data-index={i} key={`page${i}`} className="page-flex" style={pageSlideStyle}>
                     {dataSource.slice(i * cellsPerPage, i !== pages ? (i + 1) * cellsPerPage : dataSource.length).map(cell => (
                         <div
-                            key={cell.id}
+                            key={cell.id || cell._id}
                             className="page-item"
                             style={{
                                 width: `${pageSlideWidth / cols}px`,

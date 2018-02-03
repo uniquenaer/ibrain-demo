@@ -3,11 +3,13 @@
  */
 
 import React, { PureComponent } from 'react';
+import md5 from 'md5';
+import { message } from 'antd';
 import Carousel from '../../common/Carousel/index';
 import CardPreview from '../../common/Card/component/CardPreview';
 import TopNav from '../../common/TopNav';
 import Card from '../../common/Card';
-import dataUtils from '../../data/dataUtils';
+import { getCardLists } from '../../actions/card';
 import './container.css';
 const rows = 3;
 const cols = 5;
@@ -20,9 +22,29 @@ class CardPage extends PureComponent {
         this.state = {
             OpenCard: false,
             initialOpenCardIndex: null,
-        };
-        this.packList = dataUtils[data_source] && dataUtils[data_source].packList;
-        this.cardList = dataUtils[data_source] && dataUtils[data_source].cardList;
+            cardList: JSON.parse(window.localStorage.getItem(data_source)) || [],
+        }
+    };
+
+    componentWillMount() {
+        const { data_source } = this.props.params;
+        if (this.state.cardList.length <= 0) {
+
+            getCardLists(data_source)
+                .then((data) => {
+                    if (data && data.length > 0) {
+                        this.setState({
+                            cardList: data
+                        }, () => {
+                            window.localStorage.setItem(data_source, JSON.stringify(data))
+                        })
+                    }
+                })
+                .catch(err => {
+                    message.error('请求失败');
+                    console.log(err)
+                })
+        }
     };
 
     componentWillReceiveProps(nextProps) {
@@ -38,12 +60,13 @@ class CardPage extends PureComponent {
 
     renderCardPreview(card) {
         return (
-            <CardPreview key={card.id} card={card} onClickCard={this.onClickCard} />
+            <CardPreview key={card._id} card={card} onClickCard={this.onClickCard} />
         );
     };
 
     onClickCard = (id) => {
-        const index = this.cardArr.findIndex(card => card.id === id);
+
+        const index = this.cardArr.findIndex(card => card._id === id);
         this.setState({
             OpenCard: true,
             initialOpenCardIndex: index,
@@ -59,17 +82,16 @@ class CardPage extends PureComponent {
 
 
     render() {
-        const { OpenCard, initialOpenCardIndex } = this.state;
+        const { OpenCard, initialOpenCardIndex, cardList } = this.state;
         const { data_source } = this.props.params;
-        const index = this.packList && this.packList.findIndex(pack => pack.id === this.packId);
-        if (index == null || index === -1) return (
+        this.cardArr = cardList && cardList.filter(card => md5(card.pack_name) === this.packId).sort((a, b) => a.order_code > b.order_code);
+        if (this.cardArr.length <= 0) return (
             <TopNav
-                title={pack && pack.packName}
+                title={this.cardArr[0] && this.cardArr[0].pack_name}
                 router={this.props.router}>
                 <p style={{ textAlign: 'center', marginTop: '20px', color: '#383838' }}>暂无可看内容</p>
             </TopNav>
         );
-        const pack = this.packList[index];
         const card = {
             "id": "0",
             "name": "问卷调查",
@@ -86,7 +108,7 @@ class CardPage extends PureComponent {
             "status": "FINISH",
             "type": "video"
         };
-        this.cardArr = this.cardList.filter(card => card.pack_id === this.packId);
+
         if (data_source === 'demo') {
             this.cardArr.push(videoCard);
             this.cardArr.push(card);
@@ -104,7 +126,7 @@ class CardPage extends PureComponent {
             : null;
         return (
             <TopNav
-                title={pack && pack.packName}
+                title={this.cardArr[0].pack_name}
                 router={this.props.router}>
                 <div style={{ height: '100%', width: '100%' }}>
                     {cardOpen}

@@ -8,16 +8,6 @@ import './style.css';
 import { CARD_TYPE } from '../../constants';
 import VideoCardFront from '../VideoCardFront';
 
-const CARD_TYPE_WITH_GRADIENT = ['action', 'power', 'remember'];
-const CARD_TYPE_WITH_ONLY_MARKDOWN = ['action', 'power', 'remember'];
-
-const LINK_INSIDE = '(?:\\[[^\\]]*\\]|[^\\]]|\\](?=[^\\[]*\\]))*';
-const LINK_HREF_AND_TITLE = "\\s*<?([^\\s]*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*";
-const IMG_REGEXP = new RegExp(
-    `!\\[(${LINK_INSIDE})\\]\\(${LINK_HREF_AND_TITLE}\\)`,
-);
-
-
 export default class CardOpen extends PureComponent {
     state = {
         iframeHeight: null
@@ -88,27 +78,27 @@ export default class CardOpen extends PureComponent {
 
     renderPower = (card) => (
         <div className="card-main-content" id="card-main-content">
-            <h2 className="card-title">{card.name}</h2>
-            <Markdown src={card.front_content} />
+            <h2 className="card-title">{card.card_name}</h2>
+            <Markdown src={card.card_content} />
             {this.renderGradient()}
         </div>
     );
 
     renderFront = (card) => {
 
-        const front_content = card.front_content;
+        const { card_content, card_type } = card;
 
         const containerClassList = ['card-open-main'];
 
-        if (CARD_TYPE[card.type.toUpperCase()]) {
-            containerClassList.push(card.type);
+        if (CARD_TYPE[card_type.toUpperCase()]) {
+            containerClassList.push(card_type);
         }
 
-        switch (card.type) {
+        switch (card_type) {
             case CARD_TYPE.EXAM:
                 return (
                     <div className={containerClassList.join(' ')}>
-                        {this.renderExam(front_content)}
+                        {this.renderExam(card_content)}
                     </div>
                 );
 

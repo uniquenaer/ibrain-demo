@@ -85,14 +85,14 @@ export default class UploadCards extends PureComponent {
 
     render() {
         return (
-            <div style={{ display: 'inline-block', margin: '10px', verticalAlign: 'middle' }}>
+            <div style={{ display: 'inline-block', margin: '0 10px' }}>
                 <Button.Group>
-                    <Button style={{ verticalAlign: 'top' }}>
+                    <Button>
                         <a href={uploadCardTemplate} download="卡包导入模板.csv" style={{ display: 'block' }}>
                             <Icon type="download" />下载批量导入 csv 模板
                         </a>
                     </Button>
-                    <Button style={{ verticalAlign: 'top' }} onClick={this.showModal}>
+                    <Button onClick={this.showModal}>
                         <Icon type="upload" />上传
                     </Button>
                 </Button.Group>
@@ -118,7 +118,7 @@ export default class UploadCards extends PureComponent {
                         <Tag color="magenta"
                              closable
                              onClose={this.clearFiles}
-                             style={{ height: '32px', lineHeight: '32px', verticalAlign: 'top' }}><Icon
+                             style={{ height: '32px', lineHeight: '32px' }}><Icon
                             type="paper-clip" /> {this.state.file.name}
                         </Tag> : null}
                 </Modal>

@@ -4,7 +4,6 @@
 /* eslint-disable */
 import React, { PureComponent } from 'react';
 import './CardPreview.css';
-import { CARD_STATUS } from '../../constants';
 
 export default class CardPreview extends PureComponent {
     constructor(props) {
@@ -17,25 +16,17 @@ export default class CardPreview extends PureComponent {
         const { card } = this.props;
 
         return (
-            <div className={`card-preview ${card.status.toLowerCase()}`} onClick={this.onClick}>
-                {this.renderCardType(card.type, card.status)}
-                <div className="card-title">{card.name}</div>
+            <div className={`card-preview finish`} onClick={this.onClick}>
+                {this.renderCardType(card.card_type)}
+                <div className="card-title">{card.card_title}</div>
                 <div className="card-preview-bottom" />
             </div>
         );
     }
 
-    renderCardType(type, status) {
+    renderCardType(type) {
         let cardTypeImg;
-        if (status === CARD_STATUS.FINISH) {
-            cardTypeImg = require(`./image/${type}.png`);
-        } else if (status === CARD_STATUS.ONGOING) {
-            cardTypeImg = require(`./image/${type}_ongoing.png`);
-        } else if (status === CARD_STATUS.LOCK) {
-            cardTypeImg = require('./image/lock.png');
-        } else {
-            return null;
-        }
+        cardTypeImg = require(`./image/${type}.png`);
 
         return (
             <div className="card-type">
@@ -46,6 +37,6 @@ export default class CardPreview extends PureComponent {
 
     onClick(e) {
         e.preventDefault();
-        this.props.onClickCard(this.props.card.id);
+        this.props.onClickCard(this.props.card._id);
     }
 }

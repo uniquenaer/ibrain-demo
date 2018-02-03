@@ -7,11 +7,11 @@ const dev = {
 };
 
 const pro = {
-    host: 'http://192.168.0.189',
-    port: '3000',
+    host: 'http://101.200.135.183',
+    port: '3030',
 };
 
-let config =dev;
+let config = pro;
 config.domain = config.host + ':' + config.port;
 
 export default config;

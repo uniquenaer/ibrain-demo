@@ -3,21 +3,23 @@
  */
 
 import React, { PureComponent } from 'react';
-import { Layout, Select, message } from 'antd';
+import { Layout, Select, message, Button } from 'antd';
 import UploadCards from './component/UploadCards';
 import { getGroupLists, getCardLists, UpdateCard, delCard, addCardBatch } from '../../actions/card';
 import CommonTable from '../../common/CommonTable';
+import SearchBar from '../../common/SearchBar';
 import columns from './constants';
-
 
 const { Content, Header, } = Layout;
 const Option = Select.Option;
+const ButtonGroup = Button.Group;
 
 export default class AdminPackPage extends PureComponent {
     state = {
         groupNames: [],
         cardList: {},
         activeGroup: null,
+        filter: false,
     };
 
     componentWillMount() {
@@ -31,11 +33,13 @@ export default class AdminPackPage extends PureComponent {
                     this.getGroupCardLists(groups[0])
                 }
             })
+            .catch((err) => message.error('获取失败'))
     }
 
     getGroupCardLists = (group) => {
         this.setState({
-            activeGroup: group
+            activeGroup: group,
+            filter: false
         }, () => {
             getCardLists(group)
                 .then((data) => {
@@ -47,6 +51,7 @@ export default class AdminPackPage extends PureComponent {
                         })
                     }
                 })
+                .catch((err) => message.error('获取失败'))
         });
     };
 
@@ -65,6 +70,7 @@ export default class AdminPackPage extends PureComponent {
                     })
                 }
             })
+            .catch((err) => message.error('修改失败'))
     };
 
     onDeleteCard = (id) => {
@@ -82,18 +88,23 @@ export default class AdminPackPage extends PureComponent {
                     })
                 }
             })
+            .catch((err) => message.error('删除失败'))
     };
 
     addCardsBatch = (cards) => {
         const { cardList, groupNames } = this.state;
-
+        const packs = {};
 
         const cardArr = cards.map((card, index) => {
-            const { group_name } = card;
+            const { group_name, pack_name } = card;
             if (groupNames.indexOf(group_name) === -1 && !cardList[group_name]) {
                 groupNames.push(group_name);
             }
-            card.order_code = new Date().getTime();
+            if (!packs[pack_name]) {
+                packs[pack_name] = []
+            }
+            card.order_code = packs[pack_name].length;
+            packs[pack_name].push(card);
             return card
         });
 
@@ -106,19 +117,20 @@ export default class AdminPackPage extends PureComponent {
                             activeGroup: prevState.activeGroup || groupNames[0]
                         }
                     }, () => {
-                        this.getGroupCardLists(this.state.activeGroup)
+                        this.getGroupCardLists(this.state.activeGroup);
+                        message.success('添加成功');
                     });
                 }
             })
+            .catch((err) => message.error('添加失败'))
     };
 
-
     render() {
-        const { groupNames, activeGroup, cardList, } = this.state;
+        const { groupNames, activeGroup, cardList, filter, filterCards } = this.state;
         return (
             <Layout>
-                <Header style={{ background: '#fff' }}>卡片管理</Header>
-                <Content style={{ margin: '10px 0 0' }}>
+                <Header style={{ background: '#fff' }}>
+                    卡片管理
                     {groupNames.length > 0 ?
                         (<Select
                             defaultValue={`${activeGroup || groupNames[0]}`}
@@ -131,8 +143,24 @@ export default class AdminPackPage extends PureComponent {
 
                     <UploadCards addCardsBatch={this.addCardsBatch} groupNames={groupNames} />
 
+                    <ButtonGroup>
+                        <Button icon="link"
+                                href={`${window.location.origin}/packs/${activeGroup}`}
+                                target="_blank">展示地址</Button>
+                        <Button icon="eye-o"
+                                href={`${window.location.origin}/preview/packs/${activeGroup}`}
+                                target="_blank">预览该分类下的所有卡包</Button>
+                    </ButtonGroup>
+
+
+                </Header>
+                <Content style={{ margin: '10px 0 0' }}>
+
+                    <SearchBar onSearch={this.onSearch}
+                               select={this.SearchCondition()}
+                               containerStyle={{ margin: '0 10px 10px' }} />
                     <CommonTable
-                        dataSource={cardList[activeGroup] || []}
+                        dataSource={filter ? filterCards : (cardList[activeGroup] || [])}
                         pageSizeOptions={['50', '100', '200']}
                         defaultPageSize={50}
                         columns={columns(this.onDeleteCard, this.onUpdateCard)} />
@@ -140,5 +168,26 @@ export default class AdminPackPage extends PureComponent {
                 </Content>
             </Layout>
         )
+    }
+
+    onSearch = (key, val) => {
+        const { cardList, activeGroup } = this.state;
+        if (!val) {
+            this.setState({ filter: false });
+            return;
+        }
+        const reg = new RegExp(val, 'gi');
+        const filterCards = cardList[activeGroup].filter(card => card[key].match(reg));
+        this.setState({ filterCards, filter: true });
+    };
+
+    SearchCondition = () => {
+        const options = columns().map(column => ({
+            'value': column.dataIndex, 'name': column.title
+        }));
+        return {
+            default: '请选择筛选的类别',
+            options
+        };
     }
 }
