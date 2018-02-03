@@ -39,6 +39,7 @@ class PackPage extends PureComponent {
                 if (data && data.length > 0) {
                     let maxTime = Math.max.apply(this, data.map(card => moment(card.release_date)));
                     maxTime = moment(maxTime).format("MM/DD/YYYY");
+                    this.MaxTime = this.isPreviewPage ? maxTime : moment().format("MM/DD/YYYY");
                     this.setState((prevState, prevPorps) => {
                         maxTime = this.isPreviewPage ? maxTime : prevState.activeTime;
                         return { cardList: data, activeTime: this.defaultTime || maxTime, }
