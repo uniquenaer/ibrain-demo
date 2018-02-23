@@ -37,9 +37,15 @@ class PackPage extends PureComponent {
         getCardLists(data_source)
             .then((data) => {
                 if (data && data.length > 0) {
+                    // 调整卡包的显示时间
+                    data.forEach(card => {
+                        card.release_date = moment(card.release_date).add(18, 'days').format("MM/DD/YYYY");
+                    });
                     let maxTime = Math.max.apply(this, data.map(card => moment(card.release_date)));
+                    let minTime = Math.min.apply(this, data.map(card => moment(card.release_date)));
                     maxTime = moment(maxTime).format("MM/DD/YYYY");
                     this.MaxTime = this.isPreviewPage ? maxTime : moment().format("MM/DD/YYYY");
+                    this.minTime = minTime;
                     this.setState((prevState, prevPorps) => {
                         maxTime = this.isPreviewPage ? maxTime : prevState.activeTime;
                         return { cardList: data, activeTime: this.defaultTime || maxTime, }

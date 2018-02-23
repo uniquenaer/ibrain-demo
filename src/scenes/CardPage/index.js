@@ -29,7 +29,6 @@ class CardPage extends PureComponent {
     componentWillMount() {
         const { data_source } = this.props.params;
         if (this.state.cardList.length <= 0) {
-
             getCardLists(data_source)
                 .then((data) => {
                     if (data && data.length > 0) {
